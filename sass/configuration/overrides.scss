@@ -53,7 +53,46 @@ li a.active {
   color: $white-opacity-dark;
 }
 
+//Search page
+
+.pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label,
+.secondary-content .panel-pane.pane-menu-title h2,
+.secondary-content .panel-pane.pane-page-title h2 {
+  color: $white;
+}
+
+input[type=checkbox]:checked+label::before,
+#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight:hover,
+#ui-datepicker-div .ui-datepicker-calendar td a:hover {
+  background-color: $color-text-link-red;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight,
+#ui-datepicker-div .ui-corner-all .ui-icon {
+  background-color: $color-secondary;
+}
+
+//libraries page
+
+.no-touch a.opening-hours-toggle:hover::after {
+  background-color: $color-secondary;
+}
+
+.opening-hours-week .button-previous::after,
+.opening-hours-week .button-next::after {
+  background-color: $color-text-link-red;
+}
+
+
+//E-bibliotek
+
+.panel-pane ul.sub-menu li a.active::before {
+  background-color: $color-text-link-red;
+
+}
+
 // Nodelist.
+
 .ding_nodelist .more-links ul {
   padding-left: 0;
 
@@ -172,6 +211,7 @@ table tr {
 .more-link {
   a {
     color: $charcoal-opacity-dark;
+    background-color: $color-text-link-red;
 
     &:hover {
       background-color: $color-secondary;
@@ -186,6 +226,17 @@ table tr {
 
 .no-touch .ding-carousel .slick-slider .slick-arrow.slick-next:hover::after,
 .no-touch .ding-carousel .slick-slider .slick-arrow.slick-prev:hover::after {
+  background-color: $color-secondary;
+}
+
+.ding-carousel .slick-slider .slick-arrow.slick-next::after,
+.ding-carousel .slick-slider .slick-arrow.slick-prev::after {
+  background-color: $color-text-link-red;
+}
+
+.no-touch .button:hover,
+.no-touch a.topbar-link-user-account.active,
+.no-touch a.topbar-link-user-account:hover {
   background-color: $color-secondary;
 }
 
@@ -232,6 +283,16 @@ a.topbar-link-opening-hours {
     }
   }
 }
+
+.carousel-tabs .carousel-list-tabs .carousel-item a:hover,
+.carousel-tabs .carousel-list-tabs .carousel-item.active a {
+  color: $white;
+}
+
+.carousel-tabs .carousel-list-tabs .carousel-item a::after {
+  background-color: $white;
+}
+
 
 .ding-carousel {
   .slick-slider {

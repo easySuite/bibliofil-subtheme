@@ -1,0 +1,97 @@
+
+// Button
+//
+// Mixin for making button with icon
+//
+// button($icon, $color, $background-color, $color-hover, $background-color-hover)
+//
+// $icon                    - Name of icon to be placed - is a string, see _mixin.scss for icon names
+// $color                   - Color of text and icon - default is $color-text-on-secondary
+// $background-color        - Background-color of button - default is $color-secondary
+// $color-hover             - Color of text and icon on hover - default is $white
+// $background-color-hover  - Background-color of button on hover - default is $grey-dark
+//
+// Styleguide 3.1.3
+
+@mixin button(
+  $icon,
+  $color: $white !important,
+  $background-color: $bibliofil-button !important,
+  $color-hover: $color,
+  $background-color-hover: $bibliofil-button
+) {
+  @include place-icon($icon, $color);
+  @include transition(
+    background-color $speed $ease,
+    color $speed $ease
+  );
+  width: 100%;
+  float: left;
+  border-radius: $round-corner;
+  padding: 20px 80px 14px 15px;
+  background-color: $background-color;
+  color: $color;
+  font-family: $font-family-bold;
+  &::after {
+    @include transition(color $speed $ease);
+    right: 7px;
+  }
+  // Hover for non touch devices
+  .no-touch & {
+    &:hover {
+      background-color: $background-color;
+      color: $color;
+      &::after {
+        color: $color;
+      }
+    }
+  }
+}
+
+// Arrow button
+//
+// Mixin for making arrow button
+//
+// arrow-button($icon, $background-color-hover)
+//
+// $icon  - Name of icon to be placed - is a string, see _mixin.scss for icon names
+// $background-color-hover  - Background-color of button on hover - default is $grey
+//
+// Styleguide 3.1.4
+
+@mixin arrow-button(
+  $icon,
+  $background-color: $bibliofil-button
+) {
+  &::after {
+    @extend %icon-#{$icon};
+    @extend %icomoon-base;
+    @include transition(
+      background-color $speed $ease,
+      color $speed $ease
+    );
+    position: absolute;
+    display: block;
+    width: 68px;
+    height: 54px;
+    font-size: 54px;
+    line-height: 1;
+    text-align: center;
+    background-color: $background-color;
+    color: $white;
+    border-radius: $round-corner;
+
+    @include media($mobile) {
+      width: 54px;
+    }
+  }
+    // Hover for non touch devices
+  .no-touch & {
+    &:hover {
+      &::after {
+        background-color: $background-color;
+        color: $white;
+      }
+    }
+  }
+}

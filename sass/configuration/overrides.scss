@@ -29,6 +29,7 @@ h2.pane-title {
 
 h1,
 h2,
+h3 a,
 .pane-node-title h2,
 h2.pane-title,
 .pane-content .pane-title,
@@ -38,6 +39,10 @@ h2.pane-title,
 .node-ding-library.node-teaser .page-title a,
 .view-tags-list .group-separator .group-inner .separator-title {
   color: $white;
+  font-family: $font-family-light;
+}
+
+h3.title {
   font-family: $font-family-light;
 }
 
@@ -59,6 +64,40 @@ li a.active {
 .secondary-content .panel-pane.pane-menu-title h2,
 .secondary-content .panel-pane.pane-page-title h2 {
   color: $white;
+}
+
+.node-ding-event.node-teaser .info-bottom,
+.node-ding-event.node-teaser .date,
+.node-ding-event.node-teaser .title-and-lead h3.title {
+  color: $white;
+}
+
+.title-and-lead:hover .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label:hover,
+a:hover,
+li a.active,
+ul.pager li a {
+  color: $white-opacity-light;
+}
+
+.title-and-lead:hover {
+
+  .node-ding-event.node-teaser h3.title,
+  .no-touch .node-ding-event.node-teaser:hover .field-name-field-ding-event-leads {
+    color: $white-opacity-light;
+  }
+}
+
+.view-ding-event .group-separator .separator-title {
+  font-family: $font-family-light;
+}
+
+ul.pager li.pager-current {
+  color: $color-secondary;
+}
+
+.no-touch ul.pager li.pager-next a:hover::after,
+.no-touch ul.pager li.pager-previous a:hover::after {
+  background-color: $color-secondary;
 }
 
 input[type=checkbox]:checked+label::before,

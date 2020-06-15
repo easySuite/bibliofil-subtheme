@@ -46,6 +46,12 @@ h3.title {
   font-family: $font-family-light;
 }
 
+input[type=email],
+input[type=password],
+input[type=text] {
+font-family: $font-family;
+}
+
 table thead,
 .panel-pane.ding-library-address .pane-title,
 .panel-pane.ding-library-contact .pane-title {
@@ -157,7 +163,7 @@ input[type=checkbox]:checked+label::before,
 
     .text {
       .info-top {
-        color: $white-opacity-light;
+        color: $white;
       }
 
       .date,
@@ -293,11 +299,15 @@ table tr {
 // Change color for more link button.
 .more-link {
   a {
-    color: $charcoal-opacity-dark;
+    font-family: $font-family-bold;
     background-color: $color-text-link-red;
 
     &:hover {
       background-color: $color-secondary;
+    }
+
+    &::after {
+      color: $white;
     }
   }
 }
@@ -315,6 +325,24 @@ table tr {
 .ding-carousel .slick-slider .slick-arrow.slick-next::after,
 .ding-carousel .slick-slider .slick-arrow.slick-prev::after {
   background-color: $color-text-link-red;
+}
+
+.node-ding-news .ding-news-inner>.field-name-field-ding-news-materials>.field-label {
+  color: $white;
+}
+
+.ting-object.view-mode-teaser-no-overlay>.inner .field-name-ting-author,
+.ting-object.view-mode-teaser>.inner .field-name-ting-author {
+  color: $color-text-link-red;
+}
+
+.action-button {
+  color: $white;
+  background-color: $color-secondary;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .no-touch .button:hover,
@@ -381,7 +409,7 @@ a.topbar-link-opening-hours {
 }
 
 .carousel-tabs .carousel-list-tabs .carousel-item a::after {
-  background-color: $white;
+  background-color: $color-text-link-red;
 }
 
 
@@ -523,7 +551,7 @@ ul.topbar-menu {
 .node-ding-event {
   &.node-teaser {
     .info-top {
-      color: $white-opacity-light;
+      color: $white;
     }
 
     .inner {

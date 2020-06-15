@@ -1,0 +1,764 @@
+@import '../base.scss';
+
+// Hide the header navigation.
+section.topbar,
+section .navigation-inner,
+section.header-wrapper html,
+.search-field-wrapper {
+  display: none;
+}
+
+// Change the background for body.
+body {
+  padding-top: 0;
+}
+
+body,
+.ding2-site-template,
+.view-tags-list .group-separator {
+  background-color: $bibliofil;
+  color: $white;
+  font-family: $font-family;
+}
+
+a,
+ul.main-menu-third-level li a,
+h2.pane-title {
+  color: $white;
+}
+
+h1,
+h2,
+h3 a,
+.pane-node-title h2,
+h2.pane-title,
+.pane-content .pane-title,
+.node-ding-news.node-full h1,
+.node-ding-event.node-full h1,
+.panel-pane ul.sub-menu li a.active,
+.node-ding-library.node-teaser .page-title a,
+.view-tags-list .group-separator .group-inner .separator-title {
+  color: $white;
+  font-family: $font-family-light;
+}
+
+h3.title {
+  font-family: $font-family-light;
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+font-family: $font-family;
+}
+
+table thead,
+.panel-pane.ding-library-address .pane-title,
+.panel-pane.ding-library-contact .pane-title {
+  font-family: $font-family-bold;
+}
+
+a:hover,
+.pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label:hover,
+ul.pager li a,
+li a.active {
+  color: $white-opacity-dark;
+}
+
+// Change color on the search page.
+.pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label,
+.secondary-content .panel-pane.pane-menu-title h2,
+.secondary-content .panel-pane.pane-page-title h2 {
+  color: $white;
+}
+
+.node-ding-event.node-teaser .info-bottom,
+.node-ding-event.node-teaser .date,
+.node-ding-event.node-teaser .title-and-lead h3.title {
+  color: $white;
+}
+
+.title-and-lead:hover .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label:hover,
+a:hover,
+li a.active,
+ul.pager li a {
+  color: $white-opacity-light;
+}
+
+.title-and-lead:hover {
+
+  .node-ding-event.node-teaser h3.title,
+  .no-touch .node-ding-event.node-teaser:hover .field-name-field-ding-event-leads {
+    color: $white-opacity-light;
+  }
+}
+
+.view-ding-event .group-separator .separator-title {
+  font-family: $font-family-light;
+}
+
+ul.pager li.pager-current {
+  color: $color-secondary;
+}
+
+.no-touch ul.pager li.pager-next a:hover::after,
+.no-touch ul.pager li.pager-previous a:hover::after {
+  background-color: $color-secondary;
+}
+
+input[type=checkbox]:checked+label::before,
+#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight:hover,
+#ui-datepicker-div .ui-datepicker-calendar td a:hover {
+  background-color: $color-text-link-red;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight,
+#ui-datepicker-div .ui-corner-all .ui-icon {
+  background-color: $color-secondary;
+}
+
+// Change color on the libraries page.
+.no-touch a.opening-hours-toggle:hover::after {
+  background-color: $color-secondary;
+}
+
+.opening-hours-week .button-previous::after,
+.opening-hours-week .button-next::after {
+  background-color: $color-text-link-red;
+}
+
+
+// Change color on the E-bibliotek.
+.panel-pane ul.sub-menu li a.active::before {
+  background-color: $color-text-link-red;
+
+}
+
+// Change color on the Nodelist.
+.ding_nodelist .more-links ul {
+  padding-left: 0;
+
+  li {
+    margin-left: 0;
+  }
+}
+
+.ding_nodelist-promoted_nodes {
+
+  .last-left-block,
+  .first-right-block {
+    h3 {
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+.ding_nodelist-node_blocks {
+  .nb-item {
+    a {
+      color: $white;
+    }
+
+    .text {
+      .info-top {
+        color: $white;
+      }
+
+      .date,
+      .info-bottom {
+        color: $white;
+      }
+    }
+
+    .inner {
+      .background {
+        background-color: $bibliofil-dark;
+      }
+    }
+
+    .no-touch & {
+
+      &.is-hovered,
+      &:hover {
+        .background {
+          background-color: $color-topbar;
+
+          .button {
+            color: $charcoal-opacity-dark;
+          }
+        }
+
+        .text {
+
+          .date,
+          .info-bottom,
+          .title-and-lead .field-type-text-long {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Change the background for content and messages. 
+.content-wrapper {
+  .pane-content {
+    .default-panel-layout {
+
+      .left-and-main-content.inner,
+      .left-and-main-content,
+      .attachments-wrapper .panel-pane {
+        background-color: $bibliofil;
+        background-image: none;
+      }
+    }
+  }
+
+  .panel-pane.system-messages,
+  .panel-pane.system-messages .messages.status,
+  .panel-pane .messages.error {
+    background-color: $bibliofil-dark;
+    background-image: none;
+  }
+}
+
+div.panels-ipe-placeholder,
+.page-no-panels .content-wrapper {
+  background-color: $bibliofil-dark;
+  background-image: none;
+}
+
+.content-wrapper {
+  .pane-content {
+    .frontpage-layout {
+      .panel-pane {
+        background-color: $bibliofil;
+        background-image: none;
+      }
+    }
+  }
+}
+
+// Change the background and color for input.
+.panel-pane.pane-import {
+  input[type=text] {
+    background-color: $white;
+    color: $bibliofil-button;
+  }
+}
+
+// Change event and news background.
+.node-ding-news.node-full,
+.node-ding-event.node-full,
+.pane-views-panes.pane-ding-library-ding-library-libraries-list {
+  background-color: $bibliofil;
+  background-image: none;
+}
+
+// Change the background and color for input.
+.pane-views-exp-ding-event-ding-event-list .form-item input {
+  background-color: $white;
+  color: $text-input;
+}
+
+// Change the background for submit button.
+input[type="submit"] {
+  background-color: $bibliofil-button;
+}
+
+// Change color for table tr.
+table tr {
+  &.odd {
+    background-color: $bibliofil-dark;
+  }
+
+  @include media($tablet) {
+    &.even {
+      background-color: transparent;
+    }
+
+    &.odd {
+      background-color: $bibliofil-dark;
+    }
+  }
+}
+
+@include media($tablet) {
+  .opening-hours-table tr.odd {
+    background: $bibliofil-dark;
+  }
+
+  .opening-hours-table tr.even {
+    background: transparent;
+  }
+}
+
+// Change color for more link button.
+.more-link {
+  a {
+    font-family: $font-family-bold;
+    background-color: $color-text-link-red;
+
+    &:hover {
+      background-color: $color-secondary;
+    }
+
+    &::after {
+      color: $white;
+    }
+  }
+}
+
+.no-touch .more-link a:focus,
+.no-touch .more-link a:hover {
+  background-color: $color-secondary;
+}
+
+.no-touch .ding-carousel .slick-slider .slick-arrow.slick-next:hover::after,
+.no-touch .ding-carousel .slick-slider .slick-arrow.slick-prev:hover::after {
+  background-color: $color-secondary;
+}
+
+.ding-carousel .slick-slider .slick-arrow.slick-next::after,
+.ding-carousel .slick-slider .slick-arrow.slick-prev::after {
+  background-color: $color-text-link-red;
+}
+
+.node-ding-news .ding-news-inner>.field-name-field-ding-news-materials>.field-label {
+  color: $white;
+}
+
+.ting-object.view-mode-teaser-no-overlay>.inner .field-name-ting-author,
+.ting-object.view-mode-teaser>.inner .field-name-ting-author {
+  color: $color-text-link-red;
+}
+
+.action-button {
+  color: $white;
+  background-color: $color-secondary;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.no-touch .button:hover,
+.no-touch a.topbar-link-user-account.active,
+.no-touch a.topbar-link-user-account:hover {
+  background-color: $color-secondary;
+}
+
+// Change color on the tabroll.
+.ding-tabroll .ui-tabs-nav .ui-tabs-nav-item.ui-state-active a,
+.ding-tabroll .ui-tabs-nav .ui-tabs-nav-item a,
+.no-touch .ding-tabroll .ui-tabs-nav .ui-tabs-nav-item a:hover {
+  color: $white;
+}
+
+#ding-tabroll {
+  border: none;
+}
+
+.ding-tabroll {
+  .ui-tabs-nav {
+    .ui-tabs-nav-item {
+      a {
+        color: $white-opacity-dark;
+      }
+    }
+  }
+}
+
+.ding-tabroll .ui-tabs-nav .ui-tabs-nav-item a::after {
+  background-color: $color-text-link-red;
+}
+
+// Change color for topbar opening hours.
+a.topbar-link-opening-hours {
+  @include button(clock, $charcoal);
+  color: $charcoal-opacity-extra-dark;
+
+  &:hover {
+    &::after {
+      color: $charcoal;
+    }
+  }
+}
+
+// Change color for Image caption.
+.field-image-caption {
+  color: $white-opacity-dark;
+}
+
+.carousel-tabs {
+  .carousel-list-tabs {
+    .carousel-item {
+      a {
+        color: $white-opacity-dark;
+      }
+    }
+  }
+}
+
+.carousel-tabs .carousel-list-tabs .carousel-item a:hover,
+.carousel-tabs .carousel-list-tabs .carousel-item.active a {
+  color: $white;
+}
+
+.carousel-tabs .carousel-list-tabs .carousel-item a::after {
+  background-color: $color-text-link-red;
+}
+
+
+.ding-carousel {
+  .slick-slider {
+    .slick-track {
+      .placeholder {
+        background-image: none;
+        background-color: $bibliofil-dark;
+
+        .icon-spinner {
+          color: $charcoal-opacity-dark;
+        }
+      }
+    }
+  }
+}
+
+// Chaged color for Ting reference.
+.ting-reference-item {
+  .placeholder {
+    background-image: none;
+  }
+}
+
+.site-header {
+  .topbar-inner {
+    .topbar-menu {
+      background-color: $bibliofil-dark;
+    }
+  }
+
+  .header-inner {
+    .pane-search-form {
+      .form-actions {
+        input[type="submit"] {
+          background-color: $bibliofil-button;
+        }
+      }
+    }
+  }
+
+  // Change color for Navigation.
+  >.navigation-wrapper {
+    background-color: $color-topbar;
+  }
+
+  .navigation-inner {
+    background-color: $bibliofil-dark;
+  }
+}
+
+// Change color for Main menu.
+.main-menu-wrapper {
+  >ul.main-menu {
+    >li {
+      @include media($tablet) {
+        >a {
+          border-bottom: 1px solid $white-opacity-light;
+        }
+      }
+
+      a {
+        color: $white;
+
+        &::after {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+
+// Change color for Main menu third level.
+ul.main-menu-third-level {
+  li {
+    a {
+      .no-touch & {
+        &:hover {
+          color: initial;
+          font-family: $font-family-bold;
+        }
+      }
+    }
+  }
+
+  &.expanded {
+
+    &.active-trail,
+    &.active {
+      >a {
+        color: initial;
+        font-family: $font-family-bold;
+
+        &::after {
+          color: initial;
+        }
+      }
+    }
+  }
+}
+
+ul.main-menu-third-level li a.active-trail::after,
+ul.main-menu-third-level li a.active::after {
+  color: $white;
+}
+
+
+// Change color for Top menu.
+ul.topbar-menu {
+  li {
+    &.topbar-link-user {
+      a {
+        color: $charcoal-opacity-extra-dark;
+      }
+    }
+  }
+}
+
+.node-ding-eresource {
+  &.node-teaser {
+    background-color: $bibliofil-dark;
+  }
+
+  &.node-full {
+    background-image: none;
+
+    >.inner {
+      >.buttons {
+        a {
+          color: $charcoal-opacity-dark;
+        }
+      }
+    }
+  }
+}
+
+// Change color for node Event.
+.node-ding-event {
+  &.node-teaser {
+    .info-top {
+      color: $white;
+    }
+
+    .inner {
+      .background {
+        background-color: $bibliofil-dark;
+      }
+    }
+
+    .no-touch & {
+
+      &.is-hovered,
+      &:hover {
+        .background {
+          background-color: $color-topbar;
+
+          .button {
+            color: $charcoal-opacity-dark;
+          }
+
+          .title-and-lead {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.no-touch .node-ding-event.node-teaser.is-hovered .background,
+.no-touch .node-ding-event.node-teaser:hover .background {
+  background-color: $bibliofil;
+}
+
+// Change color for node News.
+.node-ding-news {
+  &.node-teaser {
+    a {
+      color: $white;
+    }
+
+    .category-and-submitted {
+      color: $white-opacity-dark;
+    }
+  }
+
+  &.node-full {
+    background-image: none;
+  }
+}
+
+.opening-hours-table {
+  td {
+    .opening-hours-table-notice {
+      color: $white-opacity-dark;
+    }
+  }
+}
+
+.opening-hours-week {
+
+  .button-previous,
+  .button-next {
+    &::after {
+      color: $charcoal-opacity-dark !important;
+    }
+  }
+}
+
+// Change color for Ding labrary address & ding library contact.
+.panel-pane {
+
+  &.ding-library-address,
+  &.ding-library-contact {
+    margin-bottom: 40px;
+
+    .pane-title {
+      border-bottom: 1px solid $white-opacity-light;
+      color: $white;
+    }
+  }
+}
+
+.panel-pane.pane-search-backends {
+  fieldset {
+    border-top: 1px solid $white-opacity-light;
+  }
+}
+
+// Change Search help.
+.panel-pane.search-help {
+  border-top: 1px solid $white-opacity-light;
+}
+
+.panel-pane.pane-ding-facetbrowser {
+  fieldset {
+    border-top: 1px solid $white-opacity-light;
+  }
+}
+
+// Change Pane bibliotek info.
+.pane-bibliotek-info {
+  border-top: 1px solid $white-opacity-light;
+}
+
+.pane-views-exp-ding-event-ding-event-list {
+  .views-exposed-form {
+    border-top: 1px solid $white-opacity-light;
+  }
+
+  .views-exposed-form-widget {
+    .sub-menu-title {
+      border-top: 1px solid $white-opacity-light !important;
+      font-family: $font-family-bold;
+
+    }
+
+    .sub-menu {
+      li {
+        label {
+          font-family: $font-family;
+        }
+      }
+    }
+  }
+}
+
+.pane-views-exp-ding-news-ding-news-list {
+  .views-exposed-form {
+    border-top: 1px solid $white-opacity-light;
+  }
+
+  .views-widget-filter-field_ding_news_category_tid,
+  .views-widget-filter-og_group_ref_target_id_entityreference_filter {
+    label {
+      h2 {
+        border-top: 1px solid $white-opacity-light;
+      }
+    }
+  }
+}
+
+// Specific styles for menu panes and taxonomy facet browser.
+.pane-menu-block-3,
+.pane-og-menu-og-single-menu-block,
+.pane-user-menu {
+  .sub-menu-title {
+    border-bottom: 1px solid $white-opacity-light;
+  }
+}
+
+.pane-taxonomy-menu,
+.pane-library-list,
+.pane-og-menu-og-single-menu-block,
+.pane-ding-facetbrowser {
+  .sub-menu-title {
+    border-top: 1px solid $white-opacity-light;
+  }
+
+  &:last-child {
+    @include media($tablet) {
+      border-bottom: 1px solid $white-opacity-light;
+    }
+  }
+}
+
+// Change User login panel.
+.pane-user-login {
+  color: $charcoal-opacity-extra-dark;
+}
+
+.popupbar {
+  color: $charcoal-opacity-dark;
+}
+
+.view-ding-library.view-display-id-ding_library_libraries_list {
+  .views-row {
+    border-top: 1px solid $white-opacity-light;
+  }
+}
+
+.view-tags-list {
+  .group-separator {
+    background-image: none;
+  }
+}
+
+input[type=checkbox]:checked+label::after {
+  color: $charcoal-opacity-dark;
+}
+
+#sliding-popup.sliding-popup-bottom {
+  #popup-buttons {
+
+    .agree-button,
+    .find-more-button,
+    .hide-popup-button {
+      background: $bibliofil-button;
+      background-image: none;
+      color: $white;
+    }
+  }
+}
+
+.social-share-container .share-buttons .icon span {
+  font-family: $font-family;
+}
+
+.pane-des-subscribe {
+  background: $color-topbar;
+}

@@ -8,6 +8,12 @@ section.header-wrapper html,
   display: none;
 }
 
+@include media($tablet, $mobile) {
+  .site-header .header-inner .pane-search-form {
+    display: none;
+  }
+}
+
 // Change the background for body.
 body {
   padding-top: 0;
@@ -19,6 +25,10 @@ body,
   background-color: $bibliofil;
   color: $white;
   font-family: $font-family;
+}
+
+.lightweight-header.lightweight-header--inline-search.bibliofil {
+  font-family: $font-family-bold;
 }
 
 a,
@@ -49,7 +59,7 @@ h3.title {
 input[type=email],
 input[type=password],
 input[type=text] {
-font-family: $font-family;
+  font-family: $font-family;
 }
 
 table thead,
@@ -70,6 +80,10 @@ li a.active {
 .secondary-content .panel-pane.pane-menu-title h2,
 .secondary-content .panel-pane.pane-page-title h2 {
   color: $white;
+}
+
+.pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu-title::after {
+  background-color: $color-secondary;
 }
 
 .node-ding-event.node-teaser .info-bottom,
@@ -118,8 +132,20 @@ input[type=checkbox]:checked+label::before,
 }
 
 // Change color on the libraries page.
-.no-touch a.opening-hours-toggle:hover::after {
+.no-touch a.opening-hours-toggle:hover::after,
+.pane-ding-facetbrowser .sub-menu-title::after,
+.pane-library-list .sub-menu-title::after,
+.pane-og-menu-og-single-menu-block .sub-menu-title::after,
+.pane-taxonomy-menu .sub-menu-title::after,
+ul.pager li.pager-next a::after,
+ul.pager li.pager-previous a::after {
   background-color: $color-secondary;
+}
+
+@include media($tablet, $mobile) {
+  .opening-hours-table td:first-child {
+    color: $white;
+  }
 }
 
 .opening-hours-week .button-previous::after,
@@ -356,6 +382,13 @@ table tr {
 .ding-tabroll .ui-tabs-nav .ui-tabs-nav-item a,
 .no-touch .ding-tabroll .ui-tabs-nav .ui-tabs-nav-item a:hover {
   color: $white;
+}
+
+@include media($tablet, $mobile) {
+  .ding-tabroll .ui-tabs-panel .info h3 a,
+  .ding-tabroll .ui-tabs-panel .info {
+    color: $white;
+  }
 }
 
 #ding-tabroll {

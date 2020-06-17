@@ -385,7 +385,6 @@ table tr {
 }
 
 @include media($tablet, $mobile) {
-
   .ding-tabroll .ui-tabs-panel .info h3 a,
   .ding-tabroll .ui-tabs-panel .info {
     color: $white;

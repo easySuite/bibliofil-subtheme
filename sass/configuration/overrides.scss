@@ -8,6 +8,12 @@ section.header-wrapper html,
   display: none;
 }
 
+.default-panel-layout,
+.frontpage-layout.limit-width {
+  position: relative;
+  margin-top: 200px;
+}
+
 @include media($tablet, $mobile) {
   .site-header .header-inner .pane-search-form {
     display: none;
@@ -35,7 +41,7 @@ body,
 }
 
 .lightweight-header.lightweight-header--inline-search.bibliofil {
-  font-family: $font-family-bold;
+  font-family: "Titillium Web", -apple-system-font, "Open sans", "Roboto", Arial, Helvetica, Verdana, sans-serif;
   position: fixed;
 }
 
@@ -682,7 +688,6 @@ ul.topbar-menu {
 }
 
 .opening-hours-week {
-
   .button-previous,
   .button-next {
     &::after {

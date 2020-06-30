@@ -8,10 +8,15 @@ section.header-wrapper html,
   display: none;
 }
 
-.default-panel-layout,
-.frontpage-layout.limit-width {
+// Mailinglist style.
+#edit-mailinglists,
+#edit-email {
+  margin-top: 10px;
+}
+
+#main-content {
   position: relative;
-  margin-top: 200px;
+  margin-top: 185px;
 }
 
 @include media($tablet, $mobile) {
@@ -422,6 +427,7 @@ a.opening-hours-toggle::after {
 }
 
 @include media($tablet, $mobile) {
+
   .ding-tabroll .ui-tabs-panel .info h3 a,
   .ding-tabroll .ui-tabs-panel .info {
     color: $white;

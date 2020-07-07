@@ -10,7 +10,7 @@
     attach: function (context, settings) {
       var systemMessage = $('.content-wrapper .panel-pane.system-messages');
       if ($('.messages.error').length > 0) {
-        systemMessage.css({ "background-color": "#ff0000" });
+        systemMessage.css({ "background-color": "#c14a2f" });
       }
     }
   }

@@ -267,8 +267,7 @@ ul.pager li.pager-previous a::after {
   }
 
   .panel-pane.system-messages,
-  .panel-pane.system-messages .messages.status,
-  .panel-pane .messages.error {
+  .panel-pane.system-messages .messages.status {
     background-color: $bibliofil-dark;
     background-image: none;
   }
@@ -281,7 +280,7 @@ ul.pager li.pager-previous a::after {
   color: $white;
 }
 
-.messages.error {
+.content-wrapper .panel-pane.system-messages .messages.error {
   background-color: red;
 }
 

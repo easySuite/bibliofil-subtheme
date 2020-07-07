@@ -242,7 +242,6 @@ ul.pager li.pager-previous a::after {
         }
 
         .text {
-
           .date,
           .info-bottom,
           .title-and-lead .field-type-text-long {
@@ -277,7 +276,13 @@ ul.pager li.pager-previous a::after {
 
 .messages.error,
 .messages.status {
+  font-family: $font-family-bold;
+  font-size: 20px;
   color: $white;
+}
+
+.messages.error {
+  background-color: red;
 }
 
 div.panels-ipe-placeholder,
@@ -706,7 +711,6 @@ ul.topbar-menu {
 
 // Change color for Ding labrary address & ding library contact.
 .panel-pane {
-
   &.ding-library-address,
   &.ding-library-contact {
     margin-bottom: 40px;

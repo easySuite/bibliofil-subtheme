@@ -1,0 +1,1 @@
+"use strict";!function($){Drupal.behaviors.messages_status={attach:function(s,e){var a=$(".content-wrapper .panel-pane.system-messages");$(".messages.error").length>0&&a.css({"background-color":"#ff0000"})}}}(jQuery);

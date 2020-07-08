@@ -281,7 +281,7 @@ ul.pager li.pager-previous a::after {
 }
 
 .content-wrapper .panel-pane.system-messages .messages.error {
-  background-color: red;
+  background-color: $color-text-link-red;
 }
 
 div.panels-ipe-placeholder,

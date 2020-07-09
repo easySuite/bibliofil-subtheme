@@ -61,7 +61,8 @@ body,
 
 a,
 ul.main-menu-third-level li a,
-h2.pane-title {
+h2.pane-title,
+.node-ding-eresource.node-teaser .text {
   color: $white;
 }
 
@@ -159,7 +160,6 @@ input[type=checkbox]:checked+label::before,
 }
 
 // Change color on the libraries page.
-.no-touch a.opening-hours-toggle:hover::after,
 .pane-ding-facetbrowser .sub-menu-title::after,
 .pane-library-list .sub-menu-title::after,
 .pane-og-menu-og-single-menu-block .sub-menu-title::after,
@@ -373,7 +373,7 @@ table tr {
 .more-link {
   a {
     font-family: $font-family-bold;
-    background-color: $color-text-link-red;
+    background-color: $color-secondary;
 
     @include media($mobile) {
       width: auto;
@@ -381,7 +381,7 @@ table tr {
     }
 
     &:hover {
-      background-color: $color-secondary;
+       background-color: $white-opacity-light;
     }
 
     &::after {
@@ -390,37 +390,40 @@ table tr {
   }
 }
 
-a.opening-hours-toggle.collapsed::after {
-  background-color: $color-text-link-red;
+a.opening-hours-toggle.collapsed::after,
+.node-ding-eresource.node-teaser .buttons a.read-more {
+  background-color: $color-secondary;
   color: $white;
 }
 
 a.opening-hours-toggle::after {
-  background-color: $color-text-link-red;
+  background-color: $color-secondary;
 }
 
 .no-touch .more-link a:focus,
-.no-touch .more-link a:hover {
-  background-color: $color-secondary;
+.no-touch .more-link a:hover,
+.no-touch a.opening-hours-toggle:hover::after {
+  background-color: $white-opacity-light;
 }
 
 .no-touch .ding-carousel .slick-slider .slick-arrow.slick-next:hover::after,
 .no-touch .ding-carousel .slick-slider .slick-arrow.slick-prev:hover::after {
-  background-color: $color-secondary;
+  background-color: $white-opacity-light;
 }
 
 .ding-carousel .slick-slider .slick-arrow.slick-next::after,
 .ding-carousel .slick-slider .slick-arrow.slick-prev::after {
-  background-color: $color-text-link-red;
+  background-color: $color-secondary;
 }
 
-.node-ding-news .ding-news-inner>.field-name-field-ding-news-materials>.field-label {
+.node-ding-news .ding-news-inner>.field-name-field-ding-news-materials>.field-label,
+.node-ding-eresource.node-teaser .buttons a::after {
   color: $white;
 }
 
 .ting-object.view-mode-teaser-no-overlay>.inner .field-name-ting-author,
 .ting-object.view-mode-teaser>.inner .field-name-ting-author {
-  color: $color-text-link-red;
+  color: $color-secondary;
 }
 
 .action-button {
@@ -466,7 +469,8 @@ a.opening-hours-toggle::after {
   }
 }
 
-.ding-tabroll .ui-tabs-nav .ui-tabs-nav-item a::after {
+.ding-tabroll .ui-tabs-nav .ui-tabs-nav-item a::after,
+.node-ding-eresource.node-teaser .buttons a {
   background-color: $color-text-link-red;
 }
 
@@ -719,7 +723,7 @@ ul.topbar-menu {
 }
 
 .no-touch .opening-hours-week .button-next:hover::after {
-  background-color: $color-secondary;
+  background-color: $white-opacity-light;
 }
 
 // Change color for Ding labrary address & ding library contact.
@@ -733,6 +737,11 @@ ul.topbar-menu {
       color: $white;
     }
   }
+}
+
+.field-type-email a,
+.field-type-link-field a {
+  color: $color-secondary;
 }
 
 .panel-pane.pane-search-backends {
@@ -827,10 +836,20 @@ ul.topbar-menu {
   color: $charcoal-opacity-dark;
 }
 
+.frontpage-layout {
+  .view-ding-event .more-link {
+    margin-top: 50px;
+  }
+}
+
 .view-ding-library.view-display-id-ding_library_libraries_list {
   .views-row {
     border-top: 1px solid $white-opacity-light;
   }
+}
+
+.view-ding-library .library-list .views-row:last-child {
+  border-bottom: 1px solid $white-opacity-light !important;
 }
 
 .view-tags-list {

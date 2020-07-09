@@ -16,7 +16,7 @@ section.header-wrapper html,
 
 #main-content {
   position: relative;
-  margin-top: 185px;
+  margin-top: 200px;
 }
 
 @include media($tablet, $mobile) {
@@ -280,8 +280,22 @@ ul.pager li.pager-previous a::after {
   color: $white;
 }
 
-.content-wrapper .panel-pane.system-messages .messages.error {
-  background-color: $color-text-link-red;
+.panel-pane.system-messages .close-messages-button::after {
+  color: $white;
+}
+
+.content-wrapper .panel-pane.system-messages {
+  visibility: hidden;
+  opacity: 0;
+
+  &.present {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .messages.error {
+    background-color: $color-text-link-red;
+  }
 }
 
 div.panels-ipe-placeholder,

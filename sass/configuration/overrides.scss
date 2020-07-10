@@ -595,7 +595,6 @@ ul.main-menu-third-level {
       .no-touch & {
         &:hover {
           color: initial;
-          font-family: $font-family-bold;
         }
       }
     }
@@ -740,8 +739,10 @@ ul.topbar-menu {
 }
 
 .field-type-email a,
-.field-type-link-field a {
+.field-type-link-field a,
+.library-contact-email a {
   color: $color-secondary;
+  font-family: $font-family-bold;
 }
 
 .panel-pane.pane-search-backends {
@@ -886,4 +887,10 @@ input[type=checkbox]:checked+label::after {
 ul.primary li a,
 ul.primary li a.active {
   color: $bibliofil-dark;
+}
+
+ul.main-menu-third-level li a.active-trail::after,
+ul.main-menu-third-level li a.active::after {
+  top: 7px;
+  left: 0;
 }

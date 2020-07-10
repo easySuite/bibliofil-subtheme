@@ -326,7 +326,8 @@ div.panels-ipe-placeholder,
 // Change event and news background.
 .node-ding-news.node-full,
 .node-ding-event.node-full,
-.pane-views-panes.pane-ding-library-ding-library-libraries-list {
+.pane-views-panes.pane-ding-library-ding-library-libraries-list,
+.node-ding-eresource.node-full {
   background-color: $bibliofil;
   background-image: none;
 }
@@ -391,7 +392,8 @@ table tr {
 }
 
 a.opening-hours-toggle.collapsed::after,
-.node-ding-eresource.node-teaser .buttons a.read-more {
+.node-ding-eresource.node-teaser .buttons a.read-more,
+.node-ding-eresource.node-full>.inner>.buttons a.buttons-button-back {
   background-color: $color-secondary;
   color: $white;
 }
@@ -470,8 +472,13 @@ a.opening-hours-toggle::after {
 }
 
 .ding-tabroll .ui-tabs-nav .ui-tabs-nav-item a::after,
-.node-ding-eresource.node-teaser .buttons a {
+.node-ding-eresource.node-teaser .buttons a,
+.node-ding-eresource.node-full>.inner>.buttons a {
   background-color: $color-text-link-red;
+}
+
+.node-ding-eresource.node-full>.inner>.buttons a {
+  color: $white;
 }
 
 // Change color for topbar opening hours.
@@ -639,6 +646,7 @@ ul.topbar-menu {
 
   &.node-full {
     background-image: none;
+    background-color: $bibliofil-dark;
 
     >.inner {
       >.buttons {
@@ -893,4 +901,9 @@ ul.main-menu-third-level li a.active-trail::after,
 ul.main-menu-third-level li a.active::after {
   top: 7px;
   left: 0;
+}
+
+.field-name-field-ding-page-body a {
+  color: $color-secondary;
+  font-family: $font-family-bold;
 }

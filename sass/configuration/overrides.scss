@@ -76,7 +76,8 @@ h2.pane-title,
 .node-ding-event.node-full h1,
 .panel-pane ul.sub-menu li a.active,
 .node-ding-library.node-teaser .page-title a,
-.view-tags-list .group-separator .group-inner .separator-title {
+.view-tags-list .group-separator .group-inner .separator-title,
+.node-ding-eresource.node-full h1 {
   color: $white;
   font-family: $font-family-light;
 }
@@ -419,7 +420,7 @@ a.opening-hours-toggle::after {
 }
 
 .node-ding-news .ding-news-inner>.field-name-field-ding-news-materials>.field-label,
-.node-ding-eresource.node-teaser .buttons a::after {
+#main-content .node-ding-eresource.node-teaser .buttons a::after {
   color: $white;
 }
 
@@ -651,7 +652,7 @@ ul.topbar-menu {
     >.inner {
       >.buttons {
         a {
-          color: $charcoal-opacity-dark;
+          color: $white;
         }
       }
     }

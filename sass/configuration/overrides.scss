@@ -8,6 +8,12 @@ section.header-wrapper html,
   display: none;
 }
 
+body.has-second-level-menu {
+  @include media($tablet-min-width) {
+    padding-top: 0;
+  }
+}
+
 // Mailinglist style.
 #edit-mailinglists,
 #edit-email {
@@ -130,6 +136,7 @@ ul.pager li a {
 }
 
 .title-and-lead:hover {
+
   .node-ding-event.node-teaser h3.title,
   .no-touch .node-ding-event.node-teaser:hover .field-name-field-ding-event-leads {
     color: $white-opacity-light;
@@ -198,6 +205,7 @@ ul.pager li.pager-previous a::after {
 }
 
 .ding_nodelist-promoted_nodes {
+
   .last-left-block,
   .first-right-block {
     h3 {
@@ -232,6 +240,7 @@ ul.pager li.pager-previous a::after {
     }
 
     .no-touch & {
+
       &.is-hovered,
       &:hover {
         .background {
@@ -243,6 +252,7 @@ ul.pager li.pager-previous a::after {
         }
 
         .text {
+
           .date,
           .info-bottom,
           .title-and-lead .field-type-text-long {
@@ -258,6 +268,7 @@ ul.pager li.pager-previous a::after {
 .content-wrapper {
   .pane-content {
     .default-panel-layout {
+
       .left-and-main-content.inner,
       .left-and-main-content,
       .attachments-wrapper .panel-pane {
@@ -383,7 +394,7 @@ table tr {
     }
 
     &:hover {
-       background-color: $white-opacity-light;
+      background-color: $white-opacity-light;
     }
 
     &::after {
@@ -452,6 +463,7 @@ a.opening-hours-toggle::after {
 }
 
 @include media($tablet, $mobile) {
+
   .ding-tabroll .ui-tabs-panel .info h3 a,
   .ding-tabroll .ui-tabs-panel .info {
     color: $white;
@@ -609,6 +621,7 @@ ul.main-menu-third-level {
   }
 
   &.expanded {
+
     &.active-trail,
     &.active {
       >a {
@@ -673,6 +686,7 @@ ul.topbar-menu {
     }
 
     .no-touch & {
+
       &.is-hovered,
       &:hover {
         .background {
@@ -722,6 +736,7 @@ ul.topbar-menu {
 }
 
 .opening-hours-week {
+
   .button-previous,
   .button-next {
     &::after {
@@ -736,6 +751,7 @@ ul.topbar-menu {
 
 // Change color for Ding labrary address & ding library contact.
 .panel-pane {
+
   &.ding-library-address,
   &.ding-library-contact {
     margin-bottom: 40px;
@@ -874,6 +890,7 @@ input[type=checkbox]:checked+label::after {
 
 #sliding-popup.sliding-popup-bottom {
   #popup-buttons {
+
     .agree-button,
     .find-more-button,
     .hide-popup-button {

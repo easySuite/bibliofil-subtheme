@@ -925,3 +925,11 @@ ul.main-menu-third-level li a.active::after {
   color: $color-secondary;
   font-family: $font-family-bold;
 }
+
+.group-right .paragraphs-block--inner {
+  background-color: transparent;
+
+  .field-label {
+    margin-bottom: 10px;
+  }
+}

@@ -339,7 +339,8 @@ div.panels-ipe-placeholder,
 .node-ding-news.node-full,
 .node-ding-event.node-full,
 .pane-views-panes.pane-ding-library-ding-library-libraries-list,
-.node-ding-eresource.node-full {
+.node-ding-eresource.node-full,
+.node.view-mode-search-result .content {
   background-color: $bibliofil;
   background-image: none;
 }
@@ -637,7 +638,8 @@ ul.main-menu-third-level {
 }
 
 ul.main-menu-third-level li a.active-trail::after,
-ul.main-menu-third-level li a.active::after {
+ul.main-menu-third-level li a.active::after,
+.pane-exp-node-search-filters .views-exposed-form-widget .sub-menu li label {
   color: $white;
 }
 

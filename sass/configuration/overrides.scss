@@ -51,8 +51,14 @@ body,
   font-family: $font-family;
 }
 
-.lightweight-header.lightweight-header--inline-search.bibliofil {
-  font-family: "Titillium Web", -apple-system-font, "Open sans", "Roboto", Arial, Helvetica, Verdana, sans-serif;
+.lightweight-header,
+.lightweight-header a,
+.lightweight-header input,
+.lightweight-header button{
+  font-family: "Titillium Web SemiBold",-apple-system-font,"Open sans",Roboto,Arial,Helvetica,Verdana,sans-serif;
+}
+
+.lightweight-header {
   position: fixed;
 }
 

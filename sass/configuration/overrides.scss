@@ -51,10 +51,6 @@ body,
   font-family: $font-family;
 }
 
-.lightweight-header {
-  position: fixed;
-}
-
 .lightweight-header.bibliofil .lightweight-header--search-form-placeholder {
   @include media($mobile) {
     width: 230px;

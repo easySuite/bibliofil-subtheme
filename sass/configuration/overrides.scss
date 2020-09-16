@@ -20,11 +20,6 @@ body.has-second-level-menu {
   margin-top: 10px;
 }
 
-.page-ding-frontpage #main-content {
-  position: relative;
-  margin-top: 200px;
-}
-
 @include media($tablet, $mobile) {
   .site-header .header-inner .pane-search-form {
     display: none;

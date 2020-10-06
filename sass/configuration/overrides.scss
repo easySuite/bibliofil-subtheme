@@ -8,6 +8,10 @@ section.header-wrapper html,
   display: none;
 }
 
+.not-front #main-content {
+  margin-top: 80px;
+}
+
 body.has-second-level-menu {
   @include media($tablet-min-width) {
     padding-top: 0;
@@ -301,7 +305,8 @@ ul.pager li.pager-previous a::after {
 }
 
 div.panels-ipe-placeholder,
-.page-no-panels .content-wrapper {
+.page-no-panels .content-wrapper,
+.node.view-mode-search-result .content {
   background-color: $bibliofil-dark;
   background-image: none;
 }
@@ -329,8 +334,7 @@ div.panels-ipe-placeholder,
 .node-ding-news.node-full,
 .node-ding-event.node-full,
 .pane-views-panes.pane-ding-library-ding-library-libraries-list,
-.node-ding-eresource.node-full,
-.node.view-mode-search-result .content {
+.node-ding-eresource.node-full {
   background-color: $bibliofil;
   background-image: none;
 }

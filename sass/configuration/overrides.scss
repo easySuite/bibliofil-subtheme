@@ -20,23 +20,18 @@ body.has-second-level-menu {
   margin-top: 10px;
 }
 
-.page-ding-frontpage #main-content {
-  position: relative;
-  margin-top: 200px;
-}
-
 @include media($tablet, $mobile) {
   .site-header .header-inner .pane-search-form {
     display: none;
   }
 }
 
-@include media($mobile) {
-  .lightweight-header--actions span.ext {
-    position: absolute;
-    top: 22px;
-  }
-}
+//@include media($mobile) {
+//  .lightweight-header--actions span.ext {
+//    position: absolute;
+//    top: 22px;
+//  }
+//}
 
 // Change the background for body.
 body {
@@ -51,18 +46,14 @@ body,
   font-family: $font-family;
 }
 
-.lightweight-header {
-  position: fixed;
-}
-
-.lightweight-header.bibliofil .lightweight-header--search-form-placeholder {
-  @include media($mobile) {
-    width: 230px;
-    text-overflow: clip;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-}
+//.lightweight-header.bibliofil .lightweight-header--search-form-placeholder {
+//  @include media($mobile) {
+//    width: 230px;
+//    text-overflow: clip;
+//    white-space: nowrap;
+//    overflow: hidden;
+//  }
+//}
 
 a,
 ul.main-menu-third-level li a,
@@ -310,7 +301,8 @@ ul.pager li.pager-previous a::after {
 }
 
 div.panels-ipe-placeholder,
-.page-no-panels .content-wrapper {
+.page-no-panels .content-wrapper,
+.node.view-mode-search-result .content {
   background-color: $bibliofil-dark;
   background-image: none;
 }
@@ -338,8 +330,7 @@ div.panels-ipe-placeholder,
 .node-ding-news.node-full,
 .node-ding-event.node-full,
 .pane-views-panes.pane-ding-library-ding-library-libraries-list,
-.node-ding-eresource.node-full,
-.node.view-mode-search-result .content {
+.node-ding-eresource.node-full {
   background-color: $bibliofil;
   background-image: none;
 }

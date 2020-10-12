@@ -8,10 +8,6 @@ section.header-wrapper html,
   display: none;
 }
 
-.not-front #main-content {
-  margin-top: 80px;
-}
-
 body.has-second-level-menu {
   @include media($tablet-min-width) {
     padding-top: 0;

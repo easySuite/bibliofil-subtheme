@@ -26,12 +26,12 @@ body.has-second-level-menu {
   }
 }
 
-@include media($mobile) {
-  .lightweight-header--actions span.ext {
-    position: absolute;
-    top: 22px;
-  }
-}
+//@include media($mobile) {
+//  .lightweight-header--actions span.ext {
+//    position: absolute;
+//    top: 22px;
+//  }
+//}
 
 // Change the background for body.
 body {
@@ -46,14 +46,14 @@ body,
   font-family: $font-family;
 }
 
-.lightweight-header.bibliofil .lightweight-header--search-form-placeholder {
-  @include media($mobile) {
-    width: 230px;
-    text-overflow: clip;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-}
+//.lightweight-header.bibliofil .lightweight-header--search-form-placeholder {
+//  @include media($mobile) {
+//    width: 230px;
+//    text-overflow: clip;
+//    white-space: nowrap;
+//    overflow: hidden;
+//  }
+//}
 
 a,
 ul.main-menu-third-level li a,
@@ -635,6 +635,9 @@ ul.main-menu-third-level li a.active::after,
   color: $white;
 }
 
+.pane-exp-node-search-filters .views-exposed-form-widget .sub-menu-title {
+  border-top: 1px solid $white-opacity-light;
+}
 
 // Change color for Top menu.
 ul.topbar-menu {

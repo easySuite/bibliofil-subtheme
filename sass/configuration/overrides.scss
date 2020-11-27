@@ -62,6 +62,12 @@ h2.pane-title,
   color: $white;
 }
 
+b,
+strong {
+  font-family: $font-family-bold;
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3,
@@ -79,9 +85,13 @@ h2.pane-title,
   font-family: $font-family-light;
 }
 
-h3.title,
-.node-ding-news.node-full .field-name-field-ding-news-lead {
+h3.title {
   font-family: $font-family-light;
+}
+
+.node-ding-news.node-full .field-name-field-ding-news-lead,
+.node-ding-event.node-full .field-name-field-ding-event-lead {
+  font-family: $font-family;
 }
 
 input[type=email],

@@ -358,6 +358,11 @@ input[type="submit"] {
   background-color: $bibliofil-button;
 }
 
+table tr:nth-child(2n+1){
+  background-color: $bibliofil-dark;
+  color: $white;
+}
+
 // Change color for table tr.
 table tr {
   &.odd {

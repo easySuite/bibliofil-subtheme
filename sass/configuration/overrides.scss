@@ -38,7 +38,7 @@ body {
   padding-top: 0;
 }
 
-body,
+body,html,
 .ding2-site-template,
 .view-tags-list .group-separator {
   background-color: $bibliofil;
@@ -65,7 +65,6 @@ h2.pane-title,
 b,
 strong {
   font-family: $font-family-bold;
-  font-weight: bold;
 }
 
 h1,

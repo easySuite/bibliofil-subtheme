@@ -447,10 +447,22 @@ a.opening-hours-toggle::after {
 }
 
 .ting-object.view-mode-teaser-no-overlay>.inner .field-name-ting-author,
-.ting-object.view-mode-teaser>.inner .field-name-ting-author {
+.ting-object.view-mode-teaser>.inner .field-name-ting-author,
+.field-name-ting-author,
+.field.field-name-ting-author.field-type-ting-author.field-label-hidden a.author {
   color: $color-secondary;
 }
 
+.ting-object.view-mode-reference-teaser {
+  background-color: $bibliofil-dark;
+}
+
+.ting-object.view-mode-reference-teaser .field-name-ting-type li,
+.ting-object.view-mode-reference-teaser .buttons .read-more-button::after {
+  color: $white;
+}
+
+.ting-object.view-mode-reference-teaser .buttons .read-more-button,
 .action-button {
   color: $white;
   background-color: $color-secondary;

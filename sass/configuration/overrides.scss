@@ -107,15 +107,14 @@ table thead,
 
 a:hover,
 .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label:hover,
-ul.pager li a,
-li a.active {
+ul.pager li a {
   color: $white-opacity-dark;
 }
 
 // Change color on the search page.
 .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label,
 .secondary-content .panel-pane.pane-menu-title h2,
-.secondary-content .panel-pane.pane-page-title h2 {
+.secondary-content .panel-pane.pane-page-title h2, li a.active {
   color: $white;
 }
 
@@ -131,7 +130,6 @@ li a.active {
 
 .title-and-lead:hover .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label:hover,
 a:hover,
-li a.active,
 ul.pager li a {
   color: $white-opacity-light;
 }
@@ -202,11 +200,17 @@ ul.pager li.pager-previous a::after {
 
   li {
     margin-left: 0;
+    list-style: none;
+  }
+}
+// Change color on minimal display the Nodelist.
+.ding_nodelist-minimal-items {
+  table tr.even {
+    background-color: $bibliofil;
   }
 }
 
 .ding_nodelist-promoted_nodes {
-
   .last-left-block,
   .first-right-block {
     h3 {
@@ -443,10 +447,22 @@ a.opening-hours-toggle::after {
 }
 
 .ting-object.view-mode-teaser-no-overlay>.inner .field-name-ting-author,
-.ting-object.view-mode-teaser>.inner .field-name-ting-author {
+.ting-object.view-mode-teaser>.inner .field-name-ting-author,
+.field-name-ting-author,
+.field.field-name-ting-author.field-type-ting-author.field-label-hidden a.author {
   color: $color-secondary;
 }
 
+.ting-object.view-mode-reference-teaser {
+  background-color: $bibliofil-dark;
+}
+
+.ting-object.view-mode-reference-teaser .field-name-ting-type li,
+.ting-object.view-mode-reference-teaser .buttons .read-more-button::after {
+  color: $white;
+}
+
+.ting-object.view-mode-reference-teaser .buttons .read-more-button,
 .action-button {
   color: $white;
   background-color: $color-secondary;

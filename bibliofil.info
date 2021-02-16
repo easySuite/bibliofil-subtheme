@@ -2,7 +2,7 @@
   name        = Bibliofil subtheme
   description = The default theme for the danish library distribution
   core        = 7.x
-  release     = 7.x-6.1.0
+  release     = 7.x-6.2.1
   base theme  = ddbasic 
 
 

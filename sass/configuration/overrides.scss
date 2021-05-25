@@ -26,13 +26,6 @@ body.has-second-level-menu {
   }
 }
 
-//@include media($mobile) {
-//  .lightweight-header--actions span.ext {
-//    position: absolute;
-//    top: 22px;
-//  }
-//}
-
 // Change the background for body.
 body {
   padding-top: 0;
@@ -45,15 +38,6 @@ body,html,
   color: $white;
   font-family: $font-family;
 }
-
-//.lightweight-header.bibliofil .lightweight-header--search-form-placeholder {
-//  @include media($mobile) {
-//    width: 230px;
-//    text-overflow: clip;
-//    white-space: nowrap;
-//    overflow: hidden;
-//  }
-//}
 
 a,
 ul.main-menu-third-level li a,
@@ -122,10 +106,12 @@ ul.pager li a {
   background-color: $color-secondary;
 }
 
-.node-ding-event.node-teaser .info-bottom,
-.node-ding-event.node-teaser .date,
-.node-ding-event.node-teaser .title-and-lead h3.title {
-  color: $white;
+.node-ding-event.node-teaser {
+  .info-bottom,
+  .date,
+  .title-and-lead h3.title {
+    color: $white;
+  }
 }
 
 .title-and-lead:hover .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label:hover,
@@ -135,7 +121,6 @@ ul.pager li a {
 }
 
 .title-and-lead:hover {
-
   .node-ding-event.node-teaser h3.title,
   .no-touch .node-ding-event.node-teaser:hover .field-name-field-ding-event-leads {
     color: $white-opacity-light;
@@ -156,6 +141,7 @@ ul.pager li.pager-current {
 }
 
 input[type=checkbox]:checked+label::before,
+input[type=checkbox]:checked, input[type=radio]:checked,
 #ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight:hover,
 #ui-datepicker-div .ui-datepicker-calendar td a:hover {
   background-color: $color-text-link-red;
@@ -182,9 +168,11 @@ ul.pager li.pager-previous a::after {
   }
 }
 
-.opening-hours-week .button-previous::after,
-.opening-hours-week .button-next::after {
-  background-color: $color-text-link-red;
+.opening-hours-week {
+  .button-previous::after,
+  .button-next::after {
+    background-color: $color-text-link-red;
+  }
 }
 
 
@@ -194,86 +182,10 @@ ul.pager li.pager-previous a::after {
 
 }
 
-// Change color on the Nodelist.
-.ding_nodelist .more-links ul {
-  padding-left: 0;
-
-  li {
-    margin-left: 0;
-    list-style: none;
-  }
-}
-// Change color on minimal display the Nodelist.
-.ding_nodelist-minimal-items {
-  table tr.even {
-    background-color: $bibliofil;
-  }
-}
-
-.ding_nodelist-promoted_nodes {
-  .last-left-block,
-  .first-right-block {
-    h3 {
-      a {
-        color: $white;
-      }
-    }
-  }
-}
-
-.ding_nodelist-node_blocks {
-  .nb-item {
-    a {
-      color: $white;
-    }
-
-    .text {
-      .info-top {
-        color: $white;
-      }
-
-      .date,
-      .info-bottom {
-        color: $white;
-      }
-    }
-
-    .inner {
-      .background {
-        background-color: $bibliofil-dark;
-      }
-    }
-
-    .no-touch & {
-
-      &.is-hovered,
-      &:hover {
-        .background {
-          background-color: $color-topbar;
-
-          .button {
-            color: $charcoal-opacity-dark;
-          }
-        }
-
-        .text {
-
-          .date,
-          .info-bottom,
-          .title-and-lead .field-type-text-long {
-            color: $white;
-          }
-        }
-      }
-    }
-  }
-}
-
 // Change the background for content and messages. 
 .content-wrapper {
   .pane-content {
     .default-panel-layout {
-
       .left-and-main-content.inner,
       .left-and-main-content,
       .attachments-wrapper .panel-pane {
@@ -283,18 +195,22 @@ ul.pager li.pager-previous a::after {
     }
   }
 
-  .panel-pane.system-messages,
-  .panel-pane.system-messages .messages.status {
-    background-color: $bibliofil-dark;
-    background-image: none;
+  .panel-pane.system-messages {
+    &,
+    & .messages.status {
+      background-color: $bibliofil-dark;
+      background-image: none;
+    }
   }
 }
 
-.messages.error,
-.messages.status {
-  font-family: $font-family-bold;
-  font-size: 20px;
-  color: $white;
+.messages{
+  &.error,
+  &.status {
+    font-family: $font-family-bold;
+    font-size: 20px;
+    color: $white;
+  }
 }
 
 .panel-pane.system-messages .close-messages-button::after {
@@ -425,20 +341,51 @@ a.opening-hours-toggle::after {
   background-color: $color-secondary;
 }
 
-.no-touch .more-link a:focus,
-.no-touch .more-link a:hover,
-.no-touch a.opening-hours-toggle:hover::after {
-  background-color: $white-opacity-light;
+.no-touch {
+  .more-link a:focus,
+  .more-link a:hover,
+  a.opening-hours-toggle:hover::after {
+    background-color: $white-opacity-light;
+  }
+
+  .ding-carousel {
+    .slick-slider{
+      .slick-arrow {
+        &.slick-next,
+        &.slick-prev {
+          &:hover::after {
+            background-color: $white-opacity-light;
+          }
+        }
+      }
+    }
+  }
 }
 
-.no-touch .ding-carousel .slick-slider .slick-arrow.slick-next:hover::after,
-.no-touch .ding-carousel .slick-slider .slick-arrow.slick-prev:hover::after {
-  background-color: $white-opacity-light;
-}
+.ding-carousel {
+  .slick-slider{
+    .slick-arrow {
+      &.slick-next,
+      &.slick-prev {
+        &::after,
+        &:hover,
+        &:focus {
+           background-color: $color-secondary;
+        }
+      }
+    }
 
-.ding-carousel .slick-slider .slick-arrow.slick-next::after,
-.ding-carousel .slick-slider .slick-arrow.slick-prev::after {
-  background-color: $color-secondary;
+    .slick-track {
+      .placeholder {
+        background-image: none;
+        background-color: $bibliofil-dark;
+
+        .icon-spinner {
+          color: $charcoal-opacity-dark;
+        }
+      }
+    }
+  }
 }
 
 .node-ding-news .ding-news-inner>.field-name-field-ding-news-materials>.field-label,
@@ -455,27 +402,29 @@ a.opening-hours-toggle::after {
 
 .ting-object.view-mode-reference-teaser {
   background-color: $bibliofil-dark;
-}
 
-.ting-object.view-mode-reference-teaser .field-name-ting-type li,
-.ting-object.view-mode-reference-teaser .buttons .read-more-button::after {
-  color: $white;
-}
-
-.ting-object.view-mode-reference-teaser .buttons .read-more-button,
-.action-button {
-  color: $white;
-  background-color: $color-secondary;
-
-  &:hover {
+  .field-name-ting-type li,
+  .buttons .read-more-button::after {
     color: $white;
+  }
+
+  .buttons .read-more-button,
+  .action-button {
+    color: $white;
+    background-color: $color-secondary;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
 
-.no-touch .button:hover,
-.no-touch a.topbar-link-user-account.active,
-.no-touch a.topbar-link-user-account:hover {
-  background-color: $color-secondary;
+.no-touch {
+  .button:hover,
+  a.topbar-link-user-account.active,
+  a.topbar-link-user-account:hover {
+    background-color: $color-secondary;
+  }
 }
 
 // Change color on the tabroll.
@@ -539,31 +488,18 @@ a.topbar-link-opening-hours {
     .carousel-item {
       a {
         color: $white-opacity-dark;
-      }
-    }
-  }
-}
 
-.carousel-tabs .carousel-list-tabs .carousel-item a:hover,
-.carousel-tabs .carousel-list-tabs .carousel-item.active a {
-  color: $white;
-}
-
-.carousel-tabs .carousel-list-tabs .carousel-item a::after {
-  background-color: $color-text-link-red;
-}
-
-
-.ding-carousel {
-  .slick-slider {
-    .slick-track {
-      .placeholder {
-        background-image: none;
-        background-color: $bibliofil-dark;
-
-        .icon-spinner {
-          color: $charcoal-opacity-dark;
+        &:hover {
+          color: $white;
         }
+
+        &::after {
+        background-color: $color-text-link-red;
+       }
+      }
+
+      &.active a {
+        color: $white;
       }
     }
   }
@@ -603,12 +539,6 @@ a.topbar-link-opening-hours {
   }
 }
 
-.ding-carousel .slick-slider .slick-arrow.slick-next:focus::after,
-.ding-carousel .slick-slider .slick-arrow.slick-next:hover::after,
-.ding-carousel .slick-slider .slick-arrow.slick-prev:focus::after,
-.ding-carousel .slick-slider .slick-arrow.slick-prev:hover::after {
-  background-color: $color-secondary;
-}
 
 // Change color for Main menu.
 .main-menu-wrapper {
@@ -633,17 +563,7 @@ a.topbar-link-opening-hours {
 
 // Change color for Main menu third level.
 ul.main-menu-third-level {
-  li {
-    a {
-      .no-touch & {
-        &:hover {
-          color: initial;
-        }
-      }
-    }
-  }
-
-  &.expanded {
+   &.expanded {
 
     &.active-trail,
     &.active {
@@ -657,10 +577,26 @@ ul.main-menu-third-level {
       }
     }
   }
+
+  li {
+    a {
+      .no-touch & {
+        &:hover {
+          color: initial;
+        }
+      }
+      &.active-trail,
+      &.active {
+        &::after {
+          color: $white;
+          top: 7px;
+          left: 0;
+        }
+      }
+    }
+  }
 }
 
-ul.main-menu-third-level li a.active-trail::after,
-ul.main-menu-third-level li a.active::after,
 .pane-exp-node-search-filters .views-exposed-form-widget .sub-menu li label {
   color: $white;
 }
@@ -687,7 +623,6 @@ ul.topbar-menu {
 
   &.node-full {
     background-image: none;
-    background-color: $bibliofil-dark;
 
     >.inner {
       >.buttons {
@@ -732,9 +667,16 @@ ul.topbar-menu {
   }
 }
 
-.no-touch .node-ding-event.node-teaser.is-hovered .background,
-.no-touch .node-ding-event.node-teaser:hover .background {
-  background-color: $bibliofil;
+.no-touch {
+  .node-ding-event.node-teaser {
+    &.is-hovered .background,
+    &.node-teaser:hover .background {
+      background-color: $bibliofil;
+    }
+  }
+  .opening-hours-week .button-next:hover::after {
+    background-color: $white-opacity-light;
+  }
 }
 
 // Change color for node News.
@@ -763,7 +705,6 @@ ul.topbar-menu {
 }
 
 .opening-hours-week {
-
   .button-previous,
   .button-next {
     &::after {
@@ -772,13 +713,8 @@ ul.topbar-menu {
   }
 }
 
-.no-touch .opening-hours-week .button-next:hover::after {
-  background-color: $white-opacity-light;
-}
-
 // Change color for Ding labrary address & ding library contact.
 .panel-pane {
-
   &.ding-library-address,
   &.ding-library-contact {
     margin-bottom: 40px;
@@ -917,7 +853,6 @@ input[type=checkbox]:checked+label::after {
 
 #sliding-popup.sliding-popup-bottom {
   #popup-buttons {
-
     .agree-button,
     .find-more-button,
     .hide-popup-button {
@@ -937,15 +872,13 @@ input[type=checkbox]:checked+label::after {
 }
 
 // Changed admin color and background.
-ul.primary li a,
-ul.primary li a.active {
-  color: $bibliofil-dark;
-}
-
-ul.main-menu-third-level li a.active-trail::after,
-ul.main-menu-third-level li a.active::after {
-  top: 7px;
-  left: 0;
+ul.primary {
+  li a {
+    &,
+    &.active {
+      color: $bibliofil-dark;
+    }
+  }
 }
 
 .field-name-field-ding-page-body a {
@@ -958,5 +891,40 @@ ul.main-menu-third-level li a.active::after {
 
   .field-label {
     margin-bottom: 10px;
+  }
+}
+
+// Stiling Staff page.
+ul.list.staff-list {
+  li .staff-name-title {
+    a,
+    div {
+      color: $white;
+    }
+  }
+
+  .staff-email a,
+  .staff-phone {
+    color: $color-secondary;
+  }
+
+  .staff-email span,
+  .staff-phone span {
+    color: $white;
+  }
+}
+
+.pane-ding-library-opening-hours-ding-library-opened-today {
+  .ui-widget-header .ui-tabs-active {
+    background: $bibliofil-dark;
+  }
+
+  .ui-widget-header .ui-state-default a,
+   h3 a {
+    color: $color-secondary;
+  }
+
+  .ui-widget-header .ui-state-default {
+    width: 45%;
   }
 }

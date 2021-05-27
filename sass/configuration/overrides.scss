@@ -1011,3 +1011,12 @@ ul.list.staff-list {
     display: block !important;
   }
 }
+
+#sliding-popup.sliding-popup-bottom,
+#sliding-popup.sliding-popup-bottom .eu-cookie-withdraw-banner,
+.eu-cookie-withdraw-tab {
+  background: $bibliofil-dark;
+}
+#sliding-popup .eu-cookie-compliance-more-button {
+  color: $white;
+}

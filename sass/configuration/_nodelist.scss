@@ -136,3 +136,37 @@
     }
   }
 }
+
+// Change color for taxonomy like.
+.ding_nodelist-taxonomy {
+  .item {
+    background-color: $color-topbar;
+  }
+  .event-list-leaf {
+    background-color: $bibliofil-dark;
+    .event-list-date-wrapper {
+      .event-list-month,
+      .event-list-date {
+        color: $bibliofil-dark;
+      }
+      .event-list-month {
+        line-height: 3;
+        font-size: 12px;
+      }
+
+      .event-list-day {
+        background-color: $color-text-link-red;
+      }
+    }
+
+    & ~ .item .date-time,
+    & ~ .item .item-price,
+    .event-list-fulldate {
+      color: $white;
+    }
+
+    & ~ .item .event-arrow-link a:after {
+      color: $color-text-link-red;
+    }
+  }
+}

@@ -141,6 +141,10 @@
 .ding_nodelist-taxonomy {
   .item {
     background-color: $color-topbar;
+
+    .item-byline .label a.label-info {
+      color: $white;
+    }
   }
   .event-list-leaf {
     background-color: $bibliofil-dark;

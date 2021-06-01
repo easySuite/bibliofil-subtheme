@@ -12,6 +12,7 @@
 
 ;----------// JavaScripts
   scripts[] = scripts/message.js
+  scripts[] = scripts/menu.js
 
 ;----------// Regions
   regions[header]            = Header

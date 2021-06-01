@@ -632,6 +632,8 @@ ul.topbar-menu {
       }
 
       .field-name-field-ding-eresource-link {
+        overflow: overlay;
+        display: block;
         .field-items {
           line-height: 3;
         }

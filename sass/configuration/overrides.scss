@@ -35,6 +35,13 @@ body.has-second-level-menu {
 // Change the background for body.
 body {
   padding-top: 0;
+
+  &.has-second-level-menu,
+  &.search-form-extended {
+    @include media($tablet, $mobile) {
+      padding-top: 0;
+    }
+  }
 }
 
 body,html,
@@ -303,10 +310,10 @@ table tr {
       background-color: $bibliofil-dark;
     }
   }
+}
 
-  &:nth-child(2n+1) {
-    background-color: $white-opacity-dark;
-  }
+.page-arrangementer table tr:nth-child(2n+1) {
+  background-color: $white-opacity-dark;
 }
 
 @include media($tablet) {

@@ -9,8 +9,14 @@ section.header-wrapper html,
 }
 
 body.has-second-level-menu {
-  @include media($tablet-min-width) {
+  @include media($tablet-min-width, $mobile) {
     padding-top: 0;
+  }
+}
+
+@include media($tablet) {
+  .lightweight-header--navigation {
+    margin-left: 0;
   }
 }
 

@@ -1032,6 +1032,12 @@ ul.list.staff-list {
   }
 }
 
+@include media(new-breakpoint(min-width 951px 12)) {
+  ul.main-menu-third-level[style*="display: none;"] {
+    display: block !important;
+  }
+}
+
 // Tablet
 @include media($tablet) {
   .panel-pane.pane-block.pane-menu-block-3 {

@@ -1084,8 +1084,8 @@ ul.list.staff-list {
         color: $white-opacity-dark;
         line-height: 40px;
         font-size: 14px;
-
       }
+      
       .carousel-select {
         border-radius: 2px;
         background-color: $white-opacity-light;
@@ -1093,9 +1093,7 @@ ul.list.staff-list {
         width: auto;
         padding: 10px;
 
-
-
-        option  {
+        option {
           width: auto;
           display: flex;
           color: $bibliofil-dark;

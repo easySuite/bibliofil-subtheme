@@ -1,0 +1,176 @@
+// Changed color for rolltab.
+.ding_nodelist-rolltab .ding_nodelist-rolltab-wrapper {
+  ul.ui-tabs-nav.ui-state-active span,
+  li.ui-tabs-nav-item.ui-state-active span,
+  ul.ui-tabs-nav span:hover,
+  li.ui-tabs-nav-item span:hover {
+    border-bottom: transparent;
+    color: $white;
+  }
+}
+
+.ding_nodelist .event-time .event-day {
+  background-color: $color-text-link-red;
+}
+
+
+// Changed color for carousel.
+.ding_nodelist-carousel {
+  .icon-next.slick-arrow:hover:after,
+  .icon-prev.slick-arrow:hover:after {
+    color: $color-secondary;
+  }
+
+  .icon-next.slick-arrow::after,
+  .icon-prev.slick-arrow::after,
+  .pn-media-play i::after {
+    color: $color-text-link-red;
+  }
+
+  .slick-dots li a {
+    line-height: 1.5;
+    background: $bibliofil;
+  }
+
+  .slick-dots li.slick-active a {
+    background-color: $color-text-link-red;
+  }
+}
+
+// Changed color for promoted_node.
+.ding_nodelist-promoted_nodes  {
+  .last-right-block, 
+  .first-left-block {
+    .eresource-info .pn-media-play i::after,
+    .news-info .pn-media-play i::after,
+    .event-info .pn-media-play i::after,
+    .page-info .pn-media-play i::after {
+      color: $color-text-link-red;
+    }
+    h3 a {
+      color: $white;
+    }
+  }
+
+  .has-video .media-container .pn-close-media i::after {
+    color: $color-text-link-red;
+  }
+
+  .ding_nodelist-pn-item { 
+    .item-date,
+    .item-price {
+      color: $white;
+    }
+  }
+
+  .last-left-block h3 a,
+  .first-right-block h3 a {
+    color: $white;
+  }
+}
+
+.ding_nodelist .event-time { 
+  color: $bibliofil;
+}
+
+// Change color on more links.
+.ding_nodelist .more-links ul {
+  padding-left: 0;
+
+  li {
+    margin-left: 0;
+    list-style: none;
+  }
+}
+
+// Change color on minimal display.
+.ding_nodelist-minimal-items {
+  table tr.even {
+    background-color: $bibliofil;
+  }
+}
+
+// Change color on node_blocks display.
+.ding_nodelist-node_blocks {
+  .nb-item {
+    a {
+      color: $white;
+    }
+
+    .text {
+      .info-top {
+        color: $white;
+      }
+
+      .date,
+      .info-bottom {
+        color: $white;
+      }
+    }
+
+    .inner {
+      .background {
+        background-color: $bibliofil-dark;
+      }
+    }
+
+    .no-touch & {
+      &.is-hovered,
+      &:hover {
+        .background {
+          background-color: $color-topbar;
+
+          .button {
+            color: $charcoal-opacity-dark;
+          }
+        }
+
+        .text {
+          .date,
+          .info-bottom,
+          .title-and-lead .field-type-text-long {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Change color for taxonomy like.
+.ding_nodelist-taxonomy {
+  .item {
+    background-color: $color-topbar;
+
+    .item-byline .label a.label-info {
+      color: $white;
+    }
+  }
+  .event-list-leaf {
+    background-color: $bibliofil-dark;
+    .event-list-date-wrapper {
+      .event-list-month,
+      .event-list-date {
+        color: $bibliofil-dark;
+      }
+      .event-list-month {
+        line-height: 3;
+        font-size: 12px;
+      }
+
+      .event-list-day {
+        background-color: $color-text-link-red;
+      }
+    }
+
+    & ~ .item .date-time,
+    & ~ .item .item-price,
+    .event-list-fulldate {
+      color: $white;
+    }
+
+    & ~ .item .event-arrow-link a:after {
+      color: $color-text-link-red;
+    }
+  }
+}

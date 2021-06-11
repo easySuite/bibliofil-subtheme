@@ -649,15 +649,20 @@ ul.topbar-menu {
       }
 
       .field-name-field-ding-eresource-link {
-        overflow: overlay;
-        display: block;
+        display: flex;
+
         .field-items {
-          line-height: 3;
+          line-height: 2;
+          display: contents;
         }
       }
+
       .field-name-field-ding-eresource-tags {
+        display: flex;
+
         .field-label {
           display: inline-block;
+          padding-top: 1px;
         }
 
         .field-items {

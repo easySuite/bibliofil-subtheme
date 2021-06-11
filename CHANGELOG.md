@@ -1,5 +1,8 @@
 ## Change Log
 
+### 7.x-6.2.3 (11/06-2021)
+- [#41](https://github.com/easySuite/bibliofil-subtheme/pull/41) EONO-24 - Changed the style for link and tag eresource. (@mihaelad)
+
 ### 7.x-6.2.2 (10/06-2021)
 - [#39](https://github.com/easySuite/bibliofil-subtheme/pull/39) EONO-12 - Fixed padding for mobile device. (@mihaelad)
 - [#38](https://github.com/easySuite/bibliofil-subtheme/pull/38) EONO-15 - Changed color for pager and tr tablel. (@mihaelad)

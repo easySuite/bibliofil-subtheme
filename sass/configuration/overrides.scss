@@ -1080,32 +1080,40 @@ ul.list.staff-list {
 @include media($tablet, $mobile) {
   .pane-bibliofil-lists-suggestions {
     .carousel-tabs {
-      &:after {
-        content: '▾';
-        position: absolute;
-        top: 85px;
-        left: 200px;
-        z-index: 1;
-        color: $white-opacity-dark;
-        line-height: 40px;
-        font-size: 14px;
-      }
-      
+      overflow: auto;
+
       .carousel-select {
-        border-radius: 2px;
+        position: relative;
+        border-radius: 3px;
+        appearance: auto;
         background-color: $white-opacity-light;
         color: $white;
-        width: auto;
+        width: 200px;
         padding: 10px;
+        box-sizing: border-box;
+        display: block;
+        z-index: 1;
 
-        option {
-          width: auto;
-          display: flex;
-          color: $bibliofil-dark;
+        &:after {
+          content: "\e91a";
+          width: 24px;
+          height: 24px;
+          z-index: 1;
+          color: $white;
+          font-family: icomoon;
         }
 
-        option[selected] {
+        &:hover {
           background-color: $color-secondary;
+        }
+
+        option:hover {
+          background-color: $bibliofil-dark;
+        }
+
+        option {
+          box-sizing: border-box;
+          width: 200px;
           color: $white;
         }
       }

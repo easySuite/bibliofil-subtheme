@@ -1112,3 +1112,50 @@ ul.list.staff-list {
     }
   }
 }
+
+.pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li,
+.panel-pane ul.sub-menu li,
+.pane-views-exp-ding-news-ding-news-list .form-item .date-padding,
+.pane-views-exp-ding-news-ding-news-list .form-item .form-item {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-family: $font-family;
+  height: 28px;
+
+  input[type=checkbox]:not(.switch):after {
+    top: 5px;
+    left: 10px;
+  }
+
+  input[type=checkbox]:not(.switch):focus {
+    outline:none;
+  }
+
+  a {
+    font-family: $font-family;
+  }
+
+  label {
+    margin-left: 10px;
+    line-height: 2;
+    margin-bottom: 0;
+  }
+
+  input {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.pane-views-exp-ding-news-ding-news-list .views-exposed-form label {
+  font-weight: normal;
+}
+
+input[type=checkbox]:checked, input[type=radio]:checked {
+   --active: $color-text-link-red;
+   --focus: 2px $color-text-link-red;
+}
+
+.panel-pane ul.sub-menu li a.active::after {
+  font-weight: bold;
+}

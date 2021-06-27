@@ -1082,34 +1082,36 @@ ul.list.staff-list {
     .carousel-tabs {
       overflow: auto;
 
+      #select-inner {
+        float: left;
+        display: inline-block;
+        overflow: auto;
+
+        &:after {
+        content: "\e900";
+        top: 7px;
+        right: 35px;
+        float: right;
+        font-family: icomoon;
+        position: relative;
+        z-index: 1;
+        font-size: 55px;
+        display: block;
+        -webkit-font-smoothing: antialiased;
+        }
+      }
+
       .carousel-select {
         position: relative;
         border-radius: 3px;
-        appearance: auto;
+        appearance: unset;
+        -webkit-font-smoothing: none;
         background-color: $white-opacity-light;
         color: $white;
         width: 200px;
         padding: 10px;
         box-sizing: border-box;
         display: block;
-        z-index: 1;
-
-        &:after {
-          content: "\e91a";
-          width: 24px;
-          height: 24px;
-          z-index: 1;
-          color: $white;
-          font-family: icomoon;
-        }
-
-        &:hover {
-          background-color: $color-secondary;
-        }
-
-        option:hover {
-          background-color: $bibliofil-dark;
-        }
 
         option {
           box-sizing: border-box;

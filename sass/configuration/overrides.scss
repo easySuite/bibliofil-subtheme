@@ -1077,47 +1077,27 @@ ul.list.staff-list {
   color: $white;
 }
 
+.pane-bibliofil-lists-suggestions {
+  .carousel-tabs {
+    .select-wrapper {
+      display: none;
+    }
+  }
+}
+
 @include media($tablet, $mobile) {
   .pane-bibliofil-lists-suggestions {
     .carousel-tabs {
-      overflow: auto;
-
-      #select-inner {
-        float: left;
-        display: inline-block;
-        overflow: auto;
-
-        &:after {
-        content: "\e900";
-        top: 7px;
-        right: 35px;
-        float: right;
-        font-family: icomoon;
-        position: relative;
-        z-index: 1;
-        font-size: 55px;
+      .select-wrapper {
+        width: 300px;
         display: block;
-        -webkit-font-smoothing: antialiased;
-        }
       }
 
       .carousel-select {
-        position: relative;
-        border-radius: 3px;
-        appearance: unset;
-        -webkit-font-smoothing: none;
-        background-color: $white-opacity-light;
-        color: $white;
-        width: 200px;
-        padding: 10px;
-        box-sizing: border-box;
-        display: block;
-
-        option {
-          box-sizing: border-box;
-          width: 200px;
-          color: $white;
-        }
+        padding: 20px 30% 12px 10px;
+        margin-bottom: 0;
+        width: 300px;
+        z-index: 0;
       }
     }
   }

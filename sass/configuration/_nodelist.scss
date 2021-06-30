@@ -90,15 +90,38 @@
   }
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 // Change color on node_blocks display.
 .ding_nodelist-node_blocks {
-  .nb-item {
+  .ding_nodelist-items .nb-item {
+    position: relative;
+
     a {
       color: $white;
+
+      .inner {
+        position: initial;
+      }
+
+      &:hover .background {
+        padding-top: 100px;
+        box-sizing: initial;
+      }
+
+      .nb-image {
+        top: 0;
+      }
     }
 
     .text {
+      @extend .clearfix;
       .info-top {
+        @extend .clearfix;
         color: $white;
       }
 
@@ -111,6 +134,7 @@
     .inner {
       .background {
         background-color: $bibliofil-dark;
+        display: block;
       }
     }
 

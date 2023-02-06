@@ -109,6 +109,7 @@ ul.pager li a {
 }
 
 // Change color on the search page.
+.pane-views-exp-ding-news-ding-news-list .views-exposed-widget .form-type-bef-checkbox label,
 .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label,
 .secondary-content .panel-pane.pane-menu-title h2,
 .secondary-content .panel-pane.pane-page-title h2, li a.active {
@@ -142,10 +143,11 @@ ul.pager li a {
 
 .view-ding-event .group-separator .separator-title {
   font-family: $font-family-light;
+  background-color: $bibliofil-dark;
 }
 
 ul.pager li.pager-current {
-  color: $color-secondary;
+  color: $color-tertiary;
 }
 
 .no-touch ul.pager li.pager-next a:hover::after,
@@ -195,7 +197,7 @@ ul.pager li.pager-previous a::after {
 
 }
 
-// Change the background for content and messages. 
+// Change the background for content and messages.
 .content-wrapper {
   .pane-content {
     .default-panel-layout {
@@ -498,7 +500,7 @@ a.topbar-link-opening-hours {
 
 // Change color for Image caption.
 .field-image-caption {
-  color: $white-opacity-dark;
+  color: $white;
 }
 
 .carousel-tabs {
@@ -600,7 +602,7 @@ ul.main-menu-third-level {
     a {
       .no-touch & {
         &:hover {
-          color: initial;
+          color: $color-tertiary;
         }
       }
       &.active-trail,
@@ -775,7 +777,7 @@ ul.topbar-menu {
 .field-type-email a,
 .field-type-link-field a,
 .library-contact-email a {
-  color: $color-secondary;
+  color: $color-tertiary;
   font-family: $font-family-bold;
 }
 
@@ -929,7 +931,7 @@ ul.primary {
 }
 
 .field-name-field-ding-page-body a {
-  color: $color-secondary;
+  color: $color-tertiary;
   font-family: $font-family-bold;
 }
 

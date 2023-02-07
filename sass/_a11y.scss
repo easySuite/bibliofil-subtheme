@@ -19,6 +19,7 @@ body {
     }
 
     h3,
+    .view-empty,
     .date,
     .node-ding-event.node-teaser .date,
     .ding_nodelist-node_blocks .nb-item .text .date,
@@ -87,6 +88,11 @@ body {
       color: $white !important;
     }
 
+    .pager .pager-current {
+      background-color: $white !important;
+      color: $black !important;
+    }
+
     .ding_nodelist-node_blocks {
       .text {
         background: transparent !important;
@@ -96,6 +102,8 @@ body {
       }
     }
 
+    .view-ding-eresource .pager-previous a::after,
+    .view-ding-eresource .pager-next a::after,
     .nb-item .button,
     .node-ding-eresource .buttons a,
     .node-ding-event.node-teaser .background .button,

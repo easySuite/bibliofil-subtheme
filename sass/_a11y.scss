@@ -1,0 +1,129 @@
+body {
+  font-size: 16px;
+}
+
+body {
+  &.a11y {
+    font-size: 24px;
+
+    h1,
+    .pane-content .pane-title {
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+
+    h2,
+    .footer-inner > .panel-pane .pane-title {
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+
+    h3,
+    .date,
+    .node-ding-event.node-teaser .date,
+    .ding_nodelist-node_blocks .nb-item .text .date,
+    label:not(.option),
+    input[type="text"],
+    input[type="submit"],
+    input[type="text"]::placeholder,
+    #views-exposed-form-ding-eresource-ding-eresource-list select,
+    #ui-datepicker-div .ui-datepicker-title select,
+    #ui-datepicker-div .ui-datepicker-calendar th,
+    #ui-datepicker-div .ui-datepicker-calendar td a {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    input[type="submit"] {
+      line-height: inherit;
+    }
+
+    .view-ding-event .group-separator .separator-title {
+      font-size: 2em;
+      line-height: 1.15em;
+
+      span {
+        font-size: 0.5em;
+        line-height: 1em;
+      }
+    }
+
+    .library-address > div,
+    #ding-library-front .field-item,
+    .libraries .field-item,
+    article .field-item,
+    .paragraphs-text,
+    .carousel-tabs .carousel-list-tabs .carousel-item a {
+      font-size: 1em;
+      line-height: 1.125em;
+    }
+
+    a.menu-item {
+      line-height: 2em;
+    }
+
+    .panel-pane ul.sub-menu li {
+      height: 2em;
+
+      a::before {
+        top: 30%;
+      }
+
+      a::after {
+        top: 20%;
+      }
+    }
+  }
+
+  &.a11y-contrast {
+    & *,
+    input[type="text"]::placeholder {
+      color: $white !important;
+      background-color: $black !important;
+    }
+
+    select {
+      background-color: transparent !important;
+      color: $white !important;
+    }
+
+    .ding_nodelist-node_blocks {
+      .text {
+        background: transparent !important;
+        & * {
+          background: transparent !important;
+        }
+      }
+    }
+
+    .nb-item .button,
+    .node-ding-eresource .buttons a,
+    .node-ding-event.node-teaser .background .button,
+    .more-link a,
+    .ding-carousel .slick-slider .slick-arrow.slick-next::after,
+    .ding-carousel .slick-slider .slick-arrow.slick-prev::after {
+      background-color: $bibliofil-dark !important;
+    }
+
+    .nb-item .button,
+    .node-ding-event.node-teaser .background .button {
+      z-index: 5;
+    }
+  }
+}
+
+.bibliofil-a11y {
+  background-color: $bibliofil-dark;
+  position: fixed;
+  left: 1%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 10px;
+
+  i {
+    font-size: 1em;
+  }
+}

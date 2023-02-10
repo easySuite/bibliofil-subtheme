@@ -7,14 +7,14 @@
     attach: function(context, settings) {
       $('.a11y-trigger', context).click(function(event) {
         var $element = $(this);
-        var $body = $('body');
+        var $html = $('html');
 
         if ($element.hasClass('font-size-trigger')) {
-          $body.toggleClass('a11y');
+          $html.toggleClass('a11y');
         }
 
         if ($element.hasClass('contrast-trigger')) {
-          $body.toggleClass('a11y-contrast');
+          $html.toggleClass('a11y-contrast');
         }
         event.preventDefault();
       });

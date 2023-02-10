@@ -1,70 +1,116 @@
-body {
-  font-size: 16px;
+html {
+  font-size: 100%;
 }
 
-body {
+html {
   &.a11y {
-    font-size: 24px;
+    font-size: 150%;
 
-    h1,
+    body {
+      font-size: 1rem !important;
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    h2.pane-title,
     .pane-content .pane-title {
-      font-size: 2em;
-      line-height: 1.5em;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
     }
 
-    h2,
-    .footer-inner > .panel-pane .pane-title {
-      font-size: 1.5em;
-      line-height: 1.5em;
-    }
-
-    h3,
-    .view-empty,
-    .date,
-    .node-ding-event.node-teaser .date,
-    .ding_nodelist-node_blocks .nb-item .text .date,
-    label:not(.option),
-    input[type="text"],
-    input[type="submit"],
-    input[type="text"]::placeholder,
-    #views-exposed-form-ding-eresource-ding-eresource-list select,
-    #ui-datepicker-div .ui-datepicker-title select,
-    #ui-datepicker-div .ui-datepicker-calendar th,
-    #ui-datepicker-div .ui-datepicker-calendar td a {
-      font-size: 1.5rem;
+    h2, h3,
+    .footer-inner > .panel-pane .pane-title,
+    .views-exposed-form-widget .sub-menu-title,
+    .node-ding-library.node-teaser .page-title {
+      font-size: 1.125rem;
       line-height: 1.5rem;
     }
 
-    input[type="submit"] {
-      line-height: inherit;
-    }
-
     .view-ding-event .group-separator .separator-title {
-      font-size: 2em;
-      line-height: 1.15em;
-
-      span {
-        font-size: 0.5em;
-        line-height: 1em;
-      }
+      font-size: 2.5rem;
+      line-height: 2.75rem;
     }
 
-    .library-address > div,
+    article.node .button,
+    article.node.node-ding-event .date-time,
+    article.node.node-ding-event .price,
+    article.node.node-ding-news .submitted,
+    article.node.node-ding-news .meta,
+    article .paragraphs-text,
+    article .field-item,
     #ding-library-front .field-item,
     .libraries .field-item,
-    article .field-item,
-    .paragraphs-text,
-    .carousel-tabs .carousel-list-tabs .carousel-item a {
-      font-size: 1em;
-      line-height: 1.125em;
+    .ding_nodelist .more-link,
+    .pane-content .more-link,
+    .opening-hours-table *,
+    .krsbib-articles-feed .subtitle,
+    .carousel-tabs .carousel-list-tabs .carousel-item a,
+    .pane-block p,
+    .view-ding-event .group-separator .separator-title > span,
+    .sub-menu li,
+    #ui-datepicker-div .ui-datepicker-title select,
+    #ui-datepicker-div .ui-datepicker-calendar th,
+    #ui-datepicker-div .ui-datepicker-calendar td a,
+    .node-ding-library.node-teaser a.opening-hours-toggle,
+    .pager li,
+    .field .field-label,
+    .field .field-items,
+    .main-menu-third-level,
+    .panel-pane.ding-library-address .pane-content,
+    .panel-pane.ding-library-contact .pane-content,
+    .view-empty,
+    .buttons a,
+    .views-exposed-form select {
+      font-size: 1rem;
+      line-height: 1.125rem;
     }
 
-    a.menu-item {
-      line-height: 2em;
+    .footer-inner > .panel-pane .menu a {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .krsbib-articles-feed .item {
+      height: auto;
+    }
+
+    .ding_nodelist-node_blocks article.node-ding-news {
+      height: 380px !important;
+    }
+
+    .ding_nodelist-node_blocks article.node-ding-event {
+      height: 480px !important;
+    }
+
+    .ding_nodelist-node_blocks .nb-item .text .info-bottom {
+      padding-right: 110px;
+    }
+
+    .ding_nodelist-node_blocks .ding_nodelist-items .nb-item a:hover .background {
+      padding-top: 160px;
+    }
+
+    .node-ding-library.node-teaser .field-name-field-ding-library-phone-number .field-label {
+      width: auto;
+    }
+
+    .node-ding-library.node-teaser .field-name-field-ding-library-phone-number .field-items {
+      padding-left: 150px;
+    }
+
+    input[type="text"],
+    input[type="text"]::placeholder,
+    input[type="submit"],
+    .views-exposed-widget label {
+      font-size: 1rem;
+      line-height: 1rem;
     }
 
     .panel-pane ul.sub-menu li {
-      height: 2em;
+      //height: 1.5rem;
 
       a::before {
         top: 30%;
@@ -83,12 +129,16 @@ body {
       background-color: $black !important;
     }
 
+    .node-ding-eresource.node-full > .inner > .buttons a::after {
+      color: $white !important;
+    }
+
     select {
       background-color: transparent !important;
       color: $white !important;
     }
 
-    .pager .pager-current {
+    ul.pager .pager-current {
       background-color: $white !important;
       color: $black !important;
     }
@@ -102,15 +152,40 @@ body {
       }
     }
 
+    article.node .event-text,
+    article.node .event-text * {
+      background: 0 0 !important;
+    }
+
     .view-ding-eresource .pager-previous a::after,
     .view-ding-eresource .pager-next a::after,
-    .nb-item .button,
     .node-ding-eresource .buttons a,
     .node-ding-event.node-teaser .background .button,
     .more-link a,
     .ding-carousel .slick-slider .slick-arrow.slick-next::after,
-    .ding-carousel .slick-slider .slick-arrow.slick-prev::after {
+    .ding-carousel .slick-slider .slick-arrow.slick-prev::after,
+    ul.pager li.pager-next a::after,
+    ul.pager li.pager-previous a::after,
+    #ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight,
+    .opening-hours-week .button-previous::after,
+    .opening-hours-week .button-next::after,
+    a.opening-hours-toggle.collapsed::after,
+    a.opening-hours-toggle::after,
+    .no-touch .ding_nodelist-node_blocks .ding_nodelist-items .nb-item.is-hovered .background,
+    .no-touch .ding_nodelist-node_blocks .ding_nodelist-items .nb-item:hover .background,
+    article.node-ding-event.node-teaser a:hover .inner,
+    article.node-ding-event.node-teaser a:hover .event-text,
+    article.node-ding-event.node-teaser a:hover .background {
       background-color: $bibliofil-dark !important;
+    }
+
+    .more-link a:hover,
+    .more-link a:hover::after,
+    #ui-datepicker-div .ui-datepicker-calendar td a:hover,
+    .nb-item .button,
+    article.node a:hover .background .button,
+    input[type="submit"] {
+      background-color: $bibliofil !important;
     }
 
     .nb-item .button,
@@ -132,6 +207,6 @@ body {
   border-radius: 10px;
 
   i {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }

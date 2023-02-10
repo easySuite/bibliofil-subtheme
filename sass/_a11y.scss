@@ -6,6 +6,10 @@ html {
   &.a11y {
     font-size: 150%;
 
+    body {
+      font-size: 1rem !important;
+    }
+
     h1 {
       font-size: 3rem;
       line-height: 3rem;
@@ -74,7 +78,7 @@ html {
     }
 
     .ding_nodelist-node_blocks article.node-ding-news {
-      height: 360px !important;
+      height: 380px !important;
     }
 
     .ding_nodelist-node_blocks article.node-ding-event {
@@ -99,9 +103,10 @@ html {
 
     input[type="text"],
     input[type="text"]::placeholder,
+    input[type="submit"],
     .views-exposed-widget label {
       font-size: 1rem;
-      line-height: 1.5rem;
+      line-height: 1rem;
     }
 
     .panel-pane ul.sub-menu li {
@@ -147,9 +152,13 @@ html {
       }
     }
 
+    article.node .event-text,
+    article.node .event-text * {
+      background: 0 0 !important;
+    }
+
     .view-ding-eresource .pager-previous a::after,
     .view-ding-eresource .pager-next a::after,
-    .nb-item .button,
     .node-ding-eresource .buttons a,
     .node-ding-event.node-teaser .background .button,
     .more-link a,
@@ -161,13 +170,21 @@ html {
     .opening-hours-week .button-previous::after,
     .opening-hours-week .button-next::after,
     a.opening-hours-toggle.collapsed::after,
-    a.opening-hours-toggle::after {
+    a.opening-hours-toggle::after,
+    .no-touch .ding_nodelist-node_blocks .ding_nodelist-items .nb-item.is-hovered .background,
+    .no-touch .ding_nodelist-node_blocks .ding_nodelist-items .nb-item:hover .background,
+    article.node-ding-event.node-teaser a:hover .inner,
+    article.node-ding-event.node-teaser a:hover .event-text,
+    article.node-ding-event.node-teaser a:hover .background {
       background-color: $bibliofil-dark !important;
     }
 
     .more-link a:hover,
     .more-link a:hover::after,
-    #ui-datepicker-div .ui-datepicker-calendar td a:hover {
+    #ui-datepicker-div .ui-datepicker-calendar td a:hover,
+    .nb-item .button,
+    article.node a:hover .background .button,
+    input[type="submit"] {
       background-color: $bibliofil !important;
     }
 

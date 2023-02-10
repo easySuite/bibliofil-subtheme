@@ -24,7 +24,8 @@ html {
     h2, h3,
     .footer-inner > .panel-pane .pane-title,
     .views-exposed-form-widget .sub-menu-title,
-    .node-ding-library.node-teaser .page-title {
+    .node-ding-library.node-teaser .page-title,
+    .ding_nodelist-node_blocks .nb-item .text .date {
       font-size: 1.125rem;
       line-height: 1.5rem;
     }
@@ -40,9 +41,6 @@ html {
     article.node.node-ding-news .submitted,
     article.node.node-ding-news .meta,
     article .paragraphs-text,
-    article .field-item,
-    #ding-library-front .field-item,
-    .libraries .field-item,
     .ding_nodelist .more-link,
     .pane-content .more-link,
     .opening-hours-table *,
@@ -56,8 +54,6 @@ html {
     #ui-datepicker-div .ui-datepicker-calendar td a,
     .node-ding-library.node-teaser a.opening-hours-toggle,
     .pager li,
-    .field .field-label,
-    .field .field-items,
     .main-menu-third-level,
     .panel-pane.ding-library-address .pane-content,
     .panel-pane.ding-library-contact .pane-content,
@@ -68,6 +64,11 @@ html {
       line-height: 1.125rem;
     }
 
+    .field .field-label,
+    .field .field-items,
+    article .field-item,
+    #ding-library-front .field-item,
+    .libraries .field-item,
     .footer-inner > .panel-pane .menu a {
       font-size: 1rem;
       line-height: 1.5rem;
@@ -78,7 +79,7 @@ html {
     }
 
     .ding_nodelist-node_blocks article.node-ding-news {
-      height: 380px !important;
+      height: 390px !important;
     }
 
     .ding_nodelist-node_blocks article.node-ding-event {
@@ -179,12 +180,15 @@ html {
       background-color: $bibliofil-dark !important;
     }
 
+    #ui-datepicker-div .ui-datepicker-calendar td a:hover,
     .more-link a:hover,
     .more-link a:hover::after,
-    #ui-datepicker-div .ui-datepicker-calendar td a:hover,
     .nb-item .button,
     article.node a:hover .background .button,
-    input[type="submit"] {
+    input[type="submit"],
+    .no-touch a.opening-hours-toggle:hover::after,
+    .no-touch .opening-hours-week .button-previous:hover::after,
+    .no-touch .opening-hours-week .button-next:hover::after {
       background-color: $bibliofil !important;
     }
 

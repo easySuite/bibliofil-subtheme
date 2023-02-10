@@ -60,8 +60,8 @@
   <?php print $page_bottom; ?>
   <?php if(!empty($a11y)): ?>
   <div id="a11y" class="bibliofil-a11y">
-    <a href="#" class="a11y-trigger font-size-trigger"><i class="fa fa-font"></i></a>
-    <a href="#" class="a11y-trigger contrast-trigger"><i class="fa fa-adjust"></i></a>
+    <a href="#" title="<?php print ('Toggle font size'); ?>" class="a11y-trigger font-size-trigger"><i class="fa fa-font"></i></a>
+    <a href="#" title="<?php print ('Toggle high contrast'); ?>" class="a11y-trigger contrast-trigger"><i class="fa fa-adjust"></i></a>
   </div>
   <?php endif; ?>
 </body>

@@ -1,5 +1,24 @@
 ## Change Log
 
+### 7.x-6.6.0 (13/02-2023)
+- [#54](https://github.com/easySuite/bibliofil-subtheme/pull/54) EASYOPAC-1440 - Controls title attributes. (@OIOIOOOI)
+- [#53](https://github.com/easySuite/bibliofil-subtheme/pull/53) EASYOPAC-1440 - Buttons hover state. (@OIOIOOOI)
+- [#52](https://github.com/easySuite/bibliofil-subtheme/pull/52) EASYOPAC-1440 - Tidier version of a11y. (@OIOIOOOI)
+- [#51](https://github.com/easySuite/bibliofil-subtheme/pull/51) EASYOPAC-1440 - Some more places to alter contrast. (@OIOIOOOI)
+- [#50](https://github.com/easySuite/bibliofil-subtheme/pull/50) EASYOPAC-1440 - A11y logic. (@OIOIOOOI)
+- [#49](https://github.com/easySuite/bibliofil-subtheme/pull/49) EONO-38 - Dark white color. (@OIOIOOOI)
+- [#48](https://github.com/easySuite/bibliofil-subtheme/pull/48) EONO-38 - WCAG color contrast. (@OIOIOOOI)
+- [#47](https://github.com/easySuite/bibliofil-subtheme/pull/47) EONO-27 - Fix click on arrow select. (@mihaelad)
+- [#46](https://github.com/easySuite/bibliofil-subtheme/pull/46) EONO-27 - Added fix for text overlaps button. (@mihaelad)
+- [#45](https://github.com/easySuite/bibliofil-subtheme/pull/45) EONO-27 - Changed style for select. (@mihaelad)
+- [#44](https://github.com/easySuite/bibliofil-subtheme/pull/44) EONO-27 - Fix arrow for select tag. (@mihaelad)
+- [#42](https://github.com/easySuite/bibliofil-subtheme/pull/42) EONO-27-ms - Added style for selector carousel. (@mihaelad)
+- [#43](https://github.com/easySuite/bibliofil-subtheme/pull/43) EONO-28 - Added style for input search event,news and eresource. (@mihaelad)
+- [#40](https://github.com/easySuite/bibliofil-subtheme/pull/40) EONO-27 - Added round corner on arrow and style for selector. (@OIOIOOOI, @mihaelad)
+
+### 7.x-6.2.3 (11/06-2021)
+- [#41](https://github.com/easySuite/bibliofil-subtheme/pull/41) EONO-24 - Changed the style for link and tag eresource. (@mihaelad)
+
 ### 7.x-6.2.2 (10/06-2021)
 - [#39](https://github.com/easySuite/bibliofil-subtheme/pull/39) EONO-12 - Fixed padding for mobile device. (@mihaelad)
 - [#38](https://github.com/easySuite/bibliofil-subtheme/pull/38) EONO-15 - Changed color for pager and tr tablel. (@mihaelad)

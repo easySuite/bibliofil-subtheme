@@ -1,16 +1,24 @@
 @import '../base.scss';
+@import '../a11y.scss';
 
 // Hide the header navigation.
 section.topbar,
 section .navigation-inner,
 section.header-wrapper html,
-.search-field-wrapper {
+.search-field-wrapper,
+.site-header {
   display: none;
 }
 
 body.has-second-level-menu {
-  @include media($tablet-min-width) {
+  @include media($tablet-min-width, $mobile) {
     padding-top: 0;
+  }
+}
+
+@include media($tablet) {
+  .lightweight-header--navigation {
+    margin-left: 0;
   }
 }
 
@@ -26,16 +34,16 @@ body.has-second-level-menu {
   }
 }
 
-//@include media($mobile) {
-//  .lightweight-header--actions span.ext {
-//    position: absolute;
-//    top: 22px;
-//  }
-//}
-
 // Change the background for body.
 body {
   padding-top: 0;
+
+  &.has-second-level-menu,
+  &.search-form-extended {
+    @include media($tablet, $mobile) {
+      padding-top: 0;
+    }
+  }
 }
 
 body,html,
@@ -45,15 +53,6 @@ body,html,
   color: $white;
   font-family: $font-family;
 }
-
-//.lightweight-header.bibliofil .lightweight-header--search-form-placeholder {
-//  @include media($mobile) {
-//    width: 230px;
-//    text-overflow: clip;
-//    white-space: nowrap;
-//    overflow: hidden;
-//  }
-//}
 
 a,
 ul.main-menu-third-level li a,
@@ -108,10 +107,11 @@ table thead,
 a:hover,
 .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label:hover,
 ul.pager li a {
-  color: $white-opacity-dark;
+  color: $white;
 }
 
 // Change color on the search page.
+.pane-views-exp-ding-news-ding-news-list .views-exposed-widget .form-type-bef-checkbox label,
 .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label,
 .secondary-content .panel-pane.pane-menu-title h2,
 .secondary-content .panel-pane.pane-page-title h2, li a.active {
@@ -122,20 +122,21 @@ ul.pager li a {
   background-color: $color-secondary;
 }
 
-.node-ding-event.node-teaser .info-bottom,
-.node-ding-event.node-teaser .date,
-.node-ding-event.node-teaser .title-and-lead h3.title {
-  color: $white;
+.node-ding-event.node-teaser {
+  .info-bottom,
+  .date,
+  .title-and-lead h3.title {
+    color: $white;
+  }
 }
 
 .title-and-lead:hover .pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li label:hover,
 a:hover,
 ul.pager li a {
-  color: $white-opacity-light;
+  color: $white;
 }
 
 .title-and-lead:hover {
-
   .node-ding-event.node-teaser h3.title,
   .no-touch .node-ding-event.node-teaser:hover .field-name-field-ding-event-leads {
     color: $white-opacity-light;
@@ -144,10 +145,11 @@ ul.pager li a {
 
 .view-ding-event .group-separator .separator-title {
   font-family: $font-family-light;
+  background-color: $bibliofil-dark;
 }
 
 ul.pager li.pager-current {
-  color: $color-secondary;
+  color: $color-tertiary;
 }
 
 .no-touch ul.pager li.pager-next a:hover::after,
@@ -156,6 +158,7 @@ ul.pager li.pager-current {
 }
 
 input[type=checkbox]:checked+label::before,
+input[type=checkbox]:checked, input[type=radio]:checked,
 #ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight:hover,
 #ui-datepicker-div .ui-datepicker-calendar td a:hover {
   background-color: $color-text-link-red;
@@ -182,9 +185,11 @@ ul.pager li.pager-previous a::after {
   }
 }
 
-.opening-hours-week .button-previous::after,
-.opening-hours-week .button-next::after {
-  background-color: $color-text-link-red;
+.opening-hours-week {
+  .button-previous::after,
+  .button-next::after {
+    background-color: $color-text-link-red;
+  }
 }
 
 
@@ -194,86 +199,10 @@ ul.pager li.pager-previous a::after {
 
 }
 
-// Change color on the Nodelist.
-.ding_nodelist .more-links ul {
-  padding-left: 0;
-
-  li {
-    margin-left: 0;
-    list-style: none;
-  }
-}
-// Change color on minimal display the Nodelist.
-.ding_nodelist-minimal-items {
-  table tr.even {
-    background-color: $bibliofil;
-  }
-}
-
-.ding_nodelist-promoted_nodes {
-  .last-left-block,
-  .first-right-block {
-    h3 {
-      a {
-        color: $white;
-      }
-    }
-  }
-}
-
-.ding_nodelist-node_blocks {
-  .nb-item {
-    a {
-      color: $white;
-    }
-
-    .text {
-      .info-top {
-        color: $white;
-      }
-
-      .date,
-      .info-bottom {
-        color: $white;
-      }
-    }
-
-    .inner {
-      .background {
-        background-color: $bibliofil-dark;
-      }
-    }
-
-    .no-touch & {
-
-      &.is-hovered,
-      &:hover {
-        .background {
-          background-color: $color-topbar;
-
-          .button {
-            color: $charcoal-opacity-dark;
-          }
-        }
-
-        .text {
-
-          .date,
-          .info-bottom,
-          .title-and-lead .field-type-text-long {
-            color: $white;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Change the background for content and messages. 
+// Change the background for content and messages.
 .content-wrapper {
   .pane-content {
     .default-panel-layout {
-
       .left-and-main-content.inner,
       .left-and-main-content,
       .attachments-wrapper .panel-pane {
@@ -283,18 +212,22 @@ ul.pager li.pager-previous a::after {
     }
   }
 
-  .panel-pane.system-messages,
-  .panel-pane.system-messages .messages.status {
-    background-color: $bibliofil-dark;
-    background-image: none;
+  .panel-pane.system-messages {
+    &,
+    & .messages.status {
+      background-color: $bibliofil-dark;
+      background-image: none;
+    }
   }
 }
 
-.messages.error,
-.messages.status {
-  font-family: $font-family-bold;
-  font-size: 20px;
-  color: $white;
+.messages{
+  &.error,
+  &.status {
+    font-family: $font-family-bold;
+    font-size: 20px;
+    color: $white;
+  }
 }
 
 .panel-pane.system-messages .close-messages-button::after {
@@ -383,6 +316,10 @@ table tr {
   }
 }
 
+.page-arrangementer table tr:nth-child(2n+1) {
+  background-color: $white-opacity-dark;
+}
+
 @include media($tablet) {
   .opening-hours-table tr.odd {
     background: $bibliofil-dark;
@@ -425,20 +362,52 @@ a.opening-hours-toggle::after {
   background-color: $color-secondary;
 }
 
-.no-touch .more-link a:focus,
-.no-touch .more-link a:hover,
-.no-touch a.opening-hours-toggle:hover::after {
-  background-color: $white-opacity-light;
+.no-touch {
+  .more-link a:focus,
+  .more-link a:hover,
+  a.opening-hours-toggle:hover::after {
+    background-color: $white-opacity-light;
+  }
+
+  .ding-carousel {
+    .slick-slider{
+      .slick-arrow {
+        &.slick-next,
+        &.slick-prev {
+          &:hover::after {
+            background-color: $white-opacity-light;
+          }
+        }
+      }
+    }
+  }
 }
 
-.no-touch .ding-carousel .slick-slider .slick-arrow.slick-next:hover::after,
-.no-touch .ding-carousel .slick-slider .slick-arrow.slick-prev:hover::after {
-  background-color: $white-opacity-light;
-}
+.ding-carousel {
+  .slick-slider{
+    .slick-arrow {
+      &.slick-next,
+      &.slick-prev {
+        &::after,
+        &:hover,
+        &:focus {
+           background-color: $color-secondary;
+           border-radius: 5px;
+        }
+      }
+    }
 
-.ding-carousel .slick-slider .slick-arrow.slick-next::after,
-.ding-carousel .slick-slider .slick-arrow.slick-prev::after {
-  background-color: $color-secondary;
+    .slick-track {
+      .placeholder {
+        background-image: none;
+        background-color: $bibliofil-dark;
+
+        .icon-spinner {
+          color: $charcoal-opacity-dark;
+        }
+      }
+    }
+  }
 }
 
 .node-ding-news .ding-news-inner>.field-name-field-ding-news-materials>.field-label,
@@ -455,27 +424,29 @@ a.opening-hours-toggle::after {
 
 .ting-object.view-mode-reference-teaser {
   background-color: $bibliofil-dark;
-}
 
-.ting-object.view-mode-reference-teaser .field-name-ting-type li,
-.ting-object.view-mode-reference-teaser .buttons .read-more-button::after {
-  color: $white;
-}
-
-.ting-object.view-mode-reference-teaser .buttons .read-more-button,
-.action-button {
-  color: $white;
-  background-color: $color-secondary;
-
-  &:hover {
+  .field-name-ting-type li,
+  .buttons .read-more-button::after {
     color: $white;
+  }
+
+  .buttons .read-more-button,
+  .action-button {
+    color: $white;
+    background-color: $color-secondary;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
 
-.no-touch .button:hover,
-.no-touch a.topbar-link-user-account.active,
-.no-touch a.topbar-link-user-account:hover {
-  background-color: $color-secondary;
+.no-touch {
+  .button:hover,
+  a.topbar-link-user-account.active,
+  a.topbar-link-user-account:hover {
+    background-color: $color-secondary;
+  }
 }
 
 // Change color on the tabroll.
@@ -531,7 +502,7 @@ a.topbar-link-opening-hours {
 
 // Change color for Image caption.
 .field-image-caption {
-  color: $white-opacity-dark;
+  color: $white;
 }
 
 .carousel-tabs {
@@ -539,31 +510,18 @@ a.topbar-link-opening-hours {
     .carousel-item {
       a {
         color: $white-opacity-dark;
-      }
-    }
-  }
-}
 
-.carousel-tabs .carousel-list-tabs .carousel-item a:hover,
-.carousel-tabs .carousel-list-tabs .carousel-item.active a {
-  color: $white;
-}
-
-.carousel-tabs .carousel-list-tabs .carousel-item a::after {
-  background-color: $color-text-link-red;
-}
-
-
-.ding-carousel {
-  .slick-slider {
-    .slick-track {
-      .placeholder {
-        background-image: none;
-        background-color: $bibliofil-dark;
-
-        .icon-spinner {
-          color: $charcoal-opacity-dark;
+        &:hover {
+          color: $white;
         }
+
+        &::after {
+        background-color: $color-text-link-red;
+       }
+      }
+
+      &.active a {
+        color: $white;
       }
     }
   }
@@ -603,12 +561,6 @@ a.topbar-link-opening-hours {
   }
 }
 
-.ding-carousel .slick-slider .slick-arrow.slick-next:focus::after,
-.ding-carousel .slick-slider .slick-arrow.slick-next:hover::after,
-.ding-carousel .slick-slider .slick-arrow.slick-prev:focus::after,
-.ding-carousel .slick-slider .slick-arrow.slick-prev:hover::after {
-  background-color: $color-secondary;
-}
 
 // Change color for Main menu.
 .main-menu-wrapper {
@@ -633,17 +585,7 @@ a.topbar-link-opening-hours {
 
 // Change color for Main menu third level.
 ul.main-menu-third-level {
-  li {
-    a {
-      .no-touch & {
-        &:hover {
-          color: initial;
-        }
-      }
-    }
-  }
-
-  &.expanded {
+   &.expanded {
 
     &.active-trail,
     &.active {
@@ -657,10 +599,26 @@ ul.main-menu-third-level {
       }
     }
   }
+
+  li {
+    a {
+      .no-touch & {
+        &:hover {
+          color: $color-tertiary;
+        }
+      }
+      &.active-trail,
+      &.active {
+        &::after {
+          color: $white;
+          top: 7px;
+          left: 0;
+        }
+      }
+    }
+  }
 }
 
-ul.main-menu-third-level li a.active-trail::after,
-ul.main-menu-third-level li a.active::after,
 .pane-exp-node-search-filters .views-exposed-form-widget .sub-menu li label {
   color: $white;
 }
@@ -687,12 +645,39 @@ ul.topbar-menu {
 
   &.node-full {
     background-image: none;
-    background-color: $bibliofil-dark;
 
     >.inner {
       >.buttons {
         a {
           color: $white;
+        }
+      }
+
+      .field-name-field-ding-eresource-link {
+        display: flex;
+
+        .field-items {
+          line-height: 2;
+          display: contents;
+        }
+      }
+
+      .field-name-field-ding-eresource-tags {
+        display: flex;
+
+        .field-label {
+          display: inline-block;
+          padding-top: 1px;
+        }
+
+        .field-items {
+          display: inline-block;
+          padding-left: 5px;
+
+          .even a,
+          .odd a {
+            color: $color-secondary;
+          }
         }
       }
     }
@@ -732,9 +717,16 @@ ul.topbar-menu {
   }
 }
 
-.no-touch .node-ding-event.node-teaser.is-hovered .background,
-.no-touch .node-ding-event.node-teaser:hover .background {
-  background-color: $bibliofil;
+.no-touch {
+  .node-ding-event.node-teaser {
+    &.is-hovered .background,
+    &.node-teaser:hover .background {
+      background-color: $bibliofil;
+    }
+  }
+  .opening-hours-week .button-next:hover::after {
+    background-color: $white-opacity-light;
+  }
 }
 
 // Change color for node News.
@@ -745,7 +737,7 @@ ul.topbar-menu {
     }
 
     .category-and-submitted {
-      color: $white-opacity-dark;
+      color: $white-dark;
     }
   }
 
@@ -757,13 +749,12 @@ ul.topbar-menu {
 .opening-hours-table {
   td {
     .opening-hours-table-notice {
-      color: $white-opacity-dark;
+      color: $white-dark;
     }
   }
 }
 
 .opening-hours-week {
-
   .button-previous,
   .button-next {
     &::after {
@@ -772,13 +763,8 @@ ul.topbar-menu {
   }
 }
 
-.no-touch .opening-hours-week .button-next:hover::after {
-  background-color: $white-opacity-light;
-}
-
 // Change color for Ding labrary address & ding library contact.
 .panel-pane {
-
   &.ding-library-address,
   &.ding-library-contact {
     margin-bottom: 40px;
@@ -793,7 +779,7 @@ ul.topbar-menu {
 .field-type-email a,
 .field-type-link-field a,
 .library-contact-email a {
-  color: $color-secondary;
+  color: $color-tertiary;
   font-family: $font-family-bold;
 }
 
@@ -828,7 +814,8 @@ ul.topbar-menu {
     .sub-menu-title {
       border-top: 1px solid $white-opacity-light !important;
       font-family: $font-family-bold;
-
+      font-size: 1.125em;
+      line-height: 1.5em;
     }
 
     .sub-menu {
@@ -868,6 +855,7 @@ ul.topbar-menu {
 .pane-taxonomy-menu,
 .pane-library-list,
 .pane-og-menu-og-single-menu-block,
+.pane-menu-block-3,
 .pane-ding-facetbrowser {
   .sub-menu-title {
     border-top: 1px solid $white-opacity-light;
@@ -917,7 +905,6 @@ input[type=checkbox]:checked+label::after {
 
 #sliding-popup.sliding-popup-bottom {
   #popup-buttons {
-
     .agree-button,
     .find-more-button,
     .hide-popup-button {
@@ -937,19 +924,17 @@ input[type=checkbox]:checked+label::after {
 }
 
 // Changed admin color and background.
-ul.primary li a,
-ul.primary li a.active {
-  color: $bibliofil-dark;
-}
-
-ul.main-menu-third-level li a.active-trail::after,
-ul.main-menu-third-level li a.active::after {
-  top: 7px;
-  left: 0;
+ul.primary {
+  li a {
+    &,
+    &.active {
+      color: $bibliofil-dark;
+    }
+  }
 }
 
 .field-name-field-ding-page-body a {
-  color: $color-secondary;
+  color: $color-tertiary;
   font-family: $font-family-bold;
 }
 
@@ -959,4 +944,212 @@ ul.main-menu-third-level li a.active::after {
   .field-label {
     margin-bottom: 10px;
   }
+}
+
+// Stiling Staff page.
+ul.list.staff-list {
+  li .staff-name-title {
+    a,
+    div {
+      color: $white;
+    }
+  }
+
+  .staff-email a,
+  .staff-phone {
+    color: $color-secondary;
+  }
+
+  .staff-email span,
+  .staff-phone span {
+    color: $white;
+  }
+}
+
+.pane-ding-library-opening-hours-ding-library-opened-today {
+  .ui-widget-header .ui-tabs-active {
+    background: $bibliofil-dark;
+  }
+
+  .ui-widget-header .ui-state-default a,
+   h3 a {
+    color: $color-secondary;
+  }
+
+  .ui-widget-header .ui-state-default {
+    width: 45%;
+  }
+}
+// Menu Block alterations.
+.pane-menu-block-3 {
+  position: relative;
+  margin-bottom: 25px;
+
+  // Tablet
+  @include media($tablet) {
+    cursor: pointer;
+  }
+  .sub-menu-title {
+    position: relative;
+    border-top: 1px solid $charcoal-opacity-light;
+    padding-top: 25px;
+
+    // Tablet
+    @include media($tablet) {
+      padding-right: 78px;
+    }
+
+    // Mobile
+    @include media($mobile) {
+      padding-right: 64px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    @include arrow-button(arrow-down);
+    &::after {
+      display: none;
+    }
+
+    // Tablet
+    @include media($tablet) {
+      margin-bottom: 25px;
+      &::after {
+        display: block;
+        right: 0;
+        top: 10px;
+      }
+    }
+  }
+  &:first-child {
+    .sub-menu-title {
+      border-top: none;
+      padding-top: 0;
+
+      // Tablet
+      @include media($tablet) {
+        padding-top: 25px;
+      }
+    }
+  }
+  ul.sub-menu,
+  ul.list-items,
+  ul.main-menu-third-level {
+    display: block;
+
+    @include media($notebook) {
+      display: block;
+    }
+
+    // Tablet
+    @include media($tablet) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    @include media($tablet) {
+      border-bottom: 1px solid $charcoal-opacity-light;
+      &.pane-og-menu-og-single-menu-block {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@include media(new-breakpoint(min-width 951px 12)) {
+  ul.main-menu-third-level[style*="display: none;"] {
+    display: block !important;
+  }
+}
+
+// Tablet
+@include media($tablet) {
+  .panel-pane.pane-block.pane-menu-block-3 {
+    display: block !important;
+  }
+}
+
+#sliding-popup.sliding-popup-bottom,
+#sliding-popup.sliding-popup-bottom .eu-cookie-withdraw-banner,
+.eu-cookie-withdraw-tab {
+  background: $bibliofil-dark;
+}
+#sliding-popup .eu-cookie-compliance-more-button {
+  color: $white;
+}
+
+.pane-bibliofil-lists-suggestions {
+  .carousel-tabs {
+    .select-wrapper {
+      display: none;
+    }
+  }
+}
+
+@include media($tablet, $mobile) {
+  .pane-bibliofil-lists-suggestions {
+    .carousel-tabs {
+      .select-wrapper {
+        width: 300px;
+        display: block;
+      }
+
+      .carousel-select {
+        padding: 20px 30% 12px 10px;
+        margin-bottom: 0;
+        width: 300px;
+      }
+    }
+  }
+}
+
+.pane-views-exp-ding-event-ding-event-list .views-exposed-form-widget .sub-menu li,
+.panel-pane ul.sub-menu li,
+.pane-views-exp-ding-news-ding-news-list .form-item .date-padding,
+.pane-views-exp-ding-news-ding-news-list .form-item .form-item {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-family: $font-family;
+  height: 28px;
+
+  input[type=checkbox]:not(.switch):after {
+    top: 5px;
+    left: 10px;
+  }
+
+  input[type=checkbox]:not(.switch):focus {
+    outline:none;
+  }
+
+  a {
+    font-family: $font-family;
+  }
+
+  label {
+    margin-left: 10px;
+    line-height: 2;
+    margin-bottom: 0;
+  }
+
+  input {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.pane-views-exp-ding-news-ding-news-list .views-exposed-form label {
+  font-weight: normal;
+}
+
+input[type=checkbox]:checked, input[type=radio]:checked {
+   --active: $color-text-link-red;
+   --focus: 2px $color-text-link-red;
+}
+
+.panel-pane ul.sub-menu li a.active::after {
+  font-weight: bold;
 }

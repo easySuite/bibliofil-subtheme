@@ -384,7 +384,7 @@ a.opening-hours-toggle::after {
 }
 
 .ding-carousel {
-  .slick-slider{
+  .slick-slider {
     .slick-arrow {
       &.slick-next,
       &.slick-prev {
@@ -410,6 +410,7 @@ a.opening-hours-toggle::after {
   }
 }
 
+.node-ding-news.node-teaser .category-and-submitted,
 .node-ding-news .ding-news-inner>.field-name-field-ding-news-materials>.field-label,
 #main-content .node-ding-eresource.node-teaser .buttons a::after {
   color: $white;
@@ -1152,4 +1153,17 @@ input[type=checkbox]:checked, input[type=radio]:checked {
 
 .panel-pane ul.sub-menu li a.active::after {
   font-weight: bold;
+}
+
+.form-required {
+  color: $color-warning-red;
+}
+
+.ding_nodelist-promoted_nodes {
+  .last-left-block,
+  .last-left-block a.label,
+  .first-right-block,
+  .first-right-block a.label {
+    color: inherit;
+  }
 }

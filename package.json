@@ -11,11 +11,11 @@
     "node": "^8"
   },
   "dependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^3.0.3",
     "gulp-concat": "^2.6.1",
     "gulp-help": "^1.6.1",
-    "gulp-jshint": "^1.11.2",
+    "gulp-jshint": "^2.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1",
     "gulp-stylelint": "^3.9.0",

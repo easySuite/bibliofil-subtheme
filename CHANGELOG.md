@@ -1,5 +1,9 @@
 ## Change Log
 
+### 7.x-6.6.1 (14/02-2023)
+- [#60](https://github.com/easySuite/bibliofil-subtheme/pull/60) EASYOPAC-1449 - Compiled styles. (@OIOIOOOI)
+- [#55](https://github.com/easySuite/bibliofil-subtheme/pull/55) EASYOPAC-1449 - A handful of wcag fixes. (@OIOIOOOI)
+
 ### 7.x-6.6.0 (13/02-2023)
 - [#54](https://github.com/easySuite/bibliofil-subtheme/pull/54) EASYOPAC-1440 - Controls title attributes. (@OIOIOOOI)
 - [#53](https://github.com/easySuite/bibliofil-subtheme/pull/53) EASYOPAC-1440 - Buttons hover state. (@OIOIOOOI)

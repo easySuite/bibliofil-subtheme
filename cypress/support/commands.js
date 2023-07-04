@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import axe from "axe-core";
+Cypress.Commands.add("injectAxe", () => {
+  cy.window({ log: false }).then(window => {
+    window.axe = axe;
+  });
+});

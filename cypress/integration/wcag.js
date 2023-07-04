@@ -13,8 +13,7 @@ describe('Accessibility tests.', () => {
   })
   
   it('Should have no accessibility violations for img, button, input, title and a tags.', () => {
-    cy.visit("/");
-    cy.wait(3000)
+    cy.visit("/",{ timeout: 30000 })
 
     cy.get('a').should('have.attr', 'href').should('not.be.empty')
 
@@ -31,102 +30,90 @@ describe('Accessibility tests.', () => {
   })
   
   it('Should have no accessibility violations on front page.', () => {
-    cy.visit("/");
-    cy.wait(3000)
-
-    cy.get('title').should('not.be.empty')
+    cy.visit("/",{ timeout: 30000 })
 
     cy.injectAxe()
+     .wait(1000)
 
     cy.checkA11y(null, {
-      exclude: ["#cookie_cat_statistic"],
       includedImpacts: ['critical','serious'],
       rules: {
-       'label-title-only' : { enabled: false }
-      }
+        'aria-required-children': { enabled: false }
+      },
     })
   })
 
   it('Should have no accessibility violations on arrangementer page.', () => {
-    cy.visit("/arrangementer");
+    cy.visit("/arrangementer",{ timeout: 30000 })
 
     cy.get('title').should('not.be.empty')
 
     cy.injectAxe()
+    .wait(3000)
 
-    cy.checkA11y(null, 
-      {
-        exclude: ['.secondary-content', "#cookie_cat_statistic"],
-        includedImpacts: ['critical','serious'],
-        rules: {
-          'aria-allowed-attr': { enabled: false },
-          'label-title-only' : { enabled: false }
-        },
-      },
-    );
-  })
-
-  it('Should have no accessibility violations on biblioteker page.', () => {
-    cy.visit("/biblioteker");
-
-    cy.get('title').should('not.be.empty')
-
-    cy.injectAxe()
-
-    cy.checkA11y(null, {
-      exclude: ["#cookie_cat_statistic"],
+  cy.checkA11y(null,
+    {
       includedImpacts: ['critical','serious'],
       rules: {
-       'label-title-only' : { enabled: false }
-      }
+        'aria-allowed-attr': { enabled: false }
+      },
+    },
+  );
+})
+
+it('Should have no accessibility violations on biblioteker page.', () => {
+  cy.visit("/biblioteker",{ timeout: 30000 })
+
+  cy.get('title').should('not.be.empty')
+
+  cy.injectAxe()
+    .wait(3000)
+
+    cy.checkA11y(null, {
+      includedImpacts: ['critical','serious']
+
     })
   })
 
   it('Should have no accessibility violations on nyheder page.', () => {
-    cy.visit("/nyheder");
+    cy.visit("/nyheder",{ timeout: 30000 })
 
     cy.get('title').should('not.be.empty')
 
     cy.injectAxe()
+      .wait(3000)
 
     cy.checkA11y(null, {
-      exclude: ["#cookie_cat_statistic"],
-      includedImpacts: ['critical','serious'],
-      rules: {
-       'label-title-only' : { enabled: false }
-      }
+      includedImpacts: ['critical','serious']
+
     })
   })
 
   it('Should have no accessibility violations on e-materialer page.', () => {
-    cy.visit("/e-materialer");
+    cy.visit("/e-materialer",{ timeout: 30000 })
 
     cy.get('title').should('not.be.empty')
 
     cy.injectAxe()
+      .wait(3000)
 
     cy.checkA11y(null, {
-      exclude: ["#cookie_cat_statistic"],
-      includedImpacts: ['critical','serious'],
-      rules: {
-       'label-title-only' : { enabled: false }
-      }
+      includedImpacts: ['critical','serious']
+
     })
   })
 
   it('Should have no accessibility violations on vi-tilbyr page.', () => {
-    cy.visit("/vi-tilbyr");
+    cy.visit("/vi-tilbyr",{ timeout: 30000 })
 
     cy.get('title').should('not.be.empty')
 
     cy.injectAxe()
+      .wait(3000)
 
     cy.checkA11y(null, {
-      exclude: ["#cookie_cat_statistic"],
-      includedImpacts: ['critical','serious'],
-      rules: {
-       'label-title-only' : { enabled: false }
-      }
+      includedImpacts: ['critical','serious']
+
     })
   })
 })

@@ -199,7 +199,7 @@ html {
   }
 }
 
-.bibliofil-a11y {
+.a11y-controls {
   background-color: $bibliofil-dark;
   position: fixed;
   left: 1%;
@@ -209,8 +209,5 @@ html {
   gap: 10px;
   padding: 5px;
   border-radius: 10px;
-
-  i {
-    font-size: 1rem;
-  }
+  line-height: 1.5em;
 }

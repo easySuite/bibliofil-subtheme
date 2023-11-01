@@ -154,7 +154,7 @@ if (function_exists('color_get_palette')) {
                                               </a>
                                             </h2>
                                             <?php if (!empty($newsletter_node->category)): ?>
-                                              <div color="<?php echo($labels_text_color_color) ?>" style="color: <?php echo($link) ?> !important; padding: 2px 4px; font-size: 12px; background-color: <?php echo($primary); ?>; text-decoration: none; display: inline-block; font-family: Helvetica, Arial, sans-serif;"><?php echo $newsletter_node->category ?></div>
+                                              <div color="<?php echo($labels_text_color_color) ?>" style="color: <?php echo($text); ?> !important; padding: 5px; font-size: 12px; background-color: <?php echo($link); ?>; text-decoration: none; display: inline-block; font-family: Helvetica, Arial, sans-serif;"><?php echo $newsletter_node->category ?></div>
                                             <?php endif; ?>
                                             <div style="font-size: 15px; line-height: 21px; font-family: Helvetica, Arial, sans-serif; color: <?php echo($text); ?>; margin: 10px 20px 20px 0;">
                                               <?php echo $newsletter_node->summary; ?>
@@ -163,7 +163,7 @@ if (function_exists('color_get_palette')) {
                                         </tr>
                                         <tr>
                                           <td colspan="3" width="540">
-                                            <div style="float: right; padding-right: 15px; font-family: Helvetica, Arial, sans-serif; color: <?php echo($link) ?> !important;"><?php echo $newsletter_node->seemore; ?></div>
+                                            <div style="float: right; padding-right: 15px; font-family: Helvetica, Arial, sans-serif; color: <?php echo($text_on_primary) ?> !important;  border-radius: 5px; padding: 20px 15px; margin-right: 10px; background-color: <?php echo($link) ?> !important;"><?php echo $newsletter_node->seemore; ?></div>
                                           </td>
                                         </tr>
                                         <tr>
@@ -288,7 +288,7 @@ if (function_exists('color_get_palette')) {
                                               </a>
                                             </h2>
                                             <?php if (!empty($newsletter_node->category)): ?>
-                                              <div color="<?php echo($labels_text_color_color) ?>" style="color: <?php echo($link) ?> !important; margin-bottom: 10px; padding: 2px 4px; font-size: 14px; background-color: <?php echo($primary); ?>; text-decoration: none; display: inline-block;"><?php echo $newsletter_node->category ?></div>
+                                              <div color="<?php echo($labels_text_color_color) ?>" style="color: <?php echo($text) ?> !important; padding: 5px; background-color: <?php echo($link); ?>; text-decoration: none; display: inline-block;"><?php echo $newsletter_node->category ?></div>
                                             <?php endif; ?>
                                             <div style="font-size: 15px; line-height: 21px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; margin-top: 10px;">
                                               <?php if (!empty($newsletter_node->libraries)): echo $newsletter_node->libraries; endif; ?>
@@ -303,7 +303,7 @@ if (function_exists('color_get_palette')) {
                                         </tr>
                                         <tr>
                                           <td colspan="3" width="540">
-                                            <div style="float: right; padding-right: 15px;font-family: Helvetica, Arial, sans-serif; color: <?php echo($link) ?> !important;"><?php echo $newsletter_node->seemore; ?></div>
+                                            <div style="float: right; padding-right: 15px;font-family: Helvetica, Arial, sans-serif; color: <?php echo($text_on_primary) ?> !important; border-radius: 5px; padding: 20px 15px; margin-right: 10px; background-color: <?php echo($link) ?> !important;"><?php echo $newsletter_node->seemore; ?></div>
                                           </td>
                                         </tr>
                                         <tr>

@@ -26,6 +26,9 @@ if (function_exists('color_get_palette')) {
     h2.element-invisible {
         display: none;
     }
+    a {
+        color: #ffffff;
+    }
 </style>
 <table class="test" style="border-collapse: collapse" border="0" cellpadding="0" cellspacing="0">
   <tbody>

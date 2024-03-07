@@ -17,9 +17,33 @@ describe('Accessibility tests.', () => {
     cy.get('meta[property="og:title"]').should('have.attr', 'content').should('not.be.empty')
 
     cy.get('meta[name="viewport"]').should('have.attr', 'content').should('not.be.empty')
-    
+
   })
-  
+
+  it('should use semantic HTML elements', () => {
+    // Visit your web page or application
+    cy.visit('/');
+
+    // Check the presence of semantic elements
+    cy.get('header').should('exist');
+    cy.get('nav').should('exist');
+    cy.get('section').should('exist');
+    cy.get('footer').should('exist');
+
+    // Check heading elements within the appropriate sections
+    cy.get('section h2').should('exist');
+    cy.get('footer h2').should('exist');
+
+    // Check the use of lists
+    cy.get('ul').should('exist');
+
+    // Check the presence of form elements
+    cy.get('form').should('exist');
+    cy.get('label').should('exist');
+    cy.get('input').should('exist');
+    cy.get('button').should('exist');
+  });
+
   it('Should have no accessibility violations for img, button, input, title and a tags.', () => {
     cy.visit("/",{ timeout: 30000 })
 
@@ -33,7 +57,7 @@ describe('Accessibility tests.', () => {
 
     cy.get('button').should('be.visible')
 
-    cy.get('input').should('have.attr', 'aria-label').should('not.be.empty')
+    cy.get('input[type="text"]').should('have.attr', 'aria-label', 'Søgefelt');
 
     cy.get('title').should('not.be.empty')
 

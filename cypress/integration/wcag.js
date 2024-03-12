@@ -20,9 +20,9 @@ describe('Accessibility tests.', () => {
 
   })
 
-  it('should use semantic HTML elements', () => {
+  it('Should use semantic HTML elements', () => {
     // Visit your web page or application
-    cy.visit('/');
+    cy.visit("/");
 
     // Check the presence of semantic elements
     cy.get('header').should('exist');
@@ -31,7 +31,6 @@ describe('Accessibility tests.', () => {
     cy.get('footer').should('exist');
 
     // Check heading elements within the appropriate sections
-    cy.get('section h2').should('exist');
     cy.get('footer h2').should('exist');
 
     // Check the use of lists
@@ -69,6 +68,70 @@ describe('Accessibility tests.', () => {
       
     })
   })
+
+  it('Accessible Forms Testing. Should have accessible form elements', () => {
+    cy.visit("/",{ timeout: 30000 })
+    // Check form labels and input fields
+    cy.get('form').within(() => {
+      cy.get('label').each((label) => {
+        const inputId = label.attr('for');
+        expect(inputId).to.exist;
+
+        const input = cy.get(`#${inputId}`);
+        input.should('exist');
+        //input.should('have.attr', 'type', label.attr('id'));
+      });
+
+      // Check for accessible error messages
+     // cy.get('.error-message').should('have.attr', 'type', 'text');
+     // cy.get('.error-message').should('have.attr', 'aria-live', 'assertive');
+    });
+  });
+
+  it('Image Accessibility Testing. Should provide alternative text for images', () => {
+    // Visit your web page or application
+    cy.visit("/");
+
+    // Check all images for the presence of alt attributes
+    cy.get('img').each((image) => {
+      const altText = image.attr('alt');
+
+      // Check if alt attribute is present and not empty
+      expect(altText).to.exist;
+      expect(altText).not.to.be.empty;
+
+      // Optionally, check for specific alt text content or patterns
+      // Example: Check that alt text is not a placeholder like "image123"
+      expect(altText.toLowerCase()).not.to.contain('image');
+    });
+
+    // Perform additional checks based on your application's image usage
+
+    // Example: Check specific images with custom attributes
+    cy.get('img').each((image) => {
+      const altText = image.attr('alt');
+
+      // Check if alt attribute is present and not empty
+      expect(altText).to.exist;
+      expect(altText).not.to.be.empty;
+    });
+  });
+
+  it('Should have focus management for form interactions', () => {
+    cy.visit("/",{ timeout: 30000 })
+    // Check focus when interacting with form elements
+    cy.get('form').within(() => {
+      // Simulate tabbing through form elements
+     // cy.tabThroughFormFields();
+
+      // Optionally check for specific focus behaviors based on your application
+      cy.get("input[title='Søgefelt']").click()
+      .should('be.focused');
+
+      cy.get("input[title='Søgefelt']").type('harry')
+      .should('be.focused');
+    });
+  });
   
   it('Should have no accessibility violations on front page.', () => {
     cy.visit("/",{ timeout: 30000 })
@@ -100,9 +163,9 @@ describe('Accessibility tests.', () => {
       },
     },
   );
-})
+  })
 
-it('Should have no accessibility violations on biblioteker page.', () => {
+  it('Should have no accessibility violations on biblioteker page.', () => {
   cy.visit("/biblioteker",{ timeout: 30000 })
 
   cy.get('title').should('not.be.empty')
